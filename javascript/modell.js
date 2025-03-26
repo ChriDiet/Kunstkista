@@ -32,17 +32,16 @@ const model = {
             userName: null,
             password: null
         },
+
         registerUser: {
             isAdmin: false,
             userName: null,
             firstName: null,
             lastName: null,
             email: null,
-            adress: {
-                streetName: null,
-                postalCode: null,
-                city: null
-            },
+            streetName: null,
+            postalCode: null,
+            city: null,
             phoneNumber: null,
             password: null,
             repeatPassword: null,
@@ -62,7 +61,6 @@ const model = {
             pickup: false,
             send: false,
             images: null,
-
         },
 
         editUser: {
@@ -77,17 +75,16 @@ const model = {
             editCity: null,
             editDisplayName: null
         },
+
         productCategory: {
             pageIndex: "1",
             sort: null,
-            filter: {
-                minPrice: null,
-                maxPrice: null,
-                pickUp: true,
-                send: false,
-                city: null,
-                condition: null,
-            }
+            minPrice: null,
+            maxPrice: null,
+            pickUp: true,
+            send: false,
+            city: null,
+            condition: null,
         }
     },
 
@@ -101,90 +98,91 @@ const model = {
         ],
     },
 
-    categories: [
-        { id: 1, name: 'painting' },
-        { id: 2, name: 'knitting' },
-        { id: 3, name: 'figurine' },
-        { id: 4, name: 'woodwork' },
-        { id: 5, name: 'photos' },
-    ],
+        categories: [
+            { id: 1, name: 'painting' },
+            { id: 2, name: 'knitting' },
+            { id: 3, name: 'figurine' },
+            { id: 4, name: 'woodwork' },
+            { id: 5, name: 'photos' },
+        ],
 
-    salesForm: [
-        { id: 1, type: 'Sale' },
-        { id: 2, type: 'Auction' }
-    ],
-    listingImages: [
-        { id: 1, listingId: 1, url: 'monalisa.jpg' },
-        { id: 2, listingId: 1, url: 'monalisa1.jpg' },
-        { id: 3, listingId: 1, url: 'monalisa2.jpg' },
-        { id: 2, listingId: 2, url: 'overlegengutt.jpg' },
-    ],
-    contactInfo: [
-        {
+        salesForm: [
+            { id: 1, type: 'Sale' },
+            { id: 2, type: 'Auction' }
+        ],
+
+        listingImages: [
+            { id: 1, listingId: 1, url: 'monalisa.jpg' },
+            { id: 2, listingId: 1, url: 'monalisa1.jpg' },
+            { id: 3, listingId: 1, url: 'monalisa2.jpg' },
+            { id: 2, listingId: 2, url: 'overlegengutt.jpg' },
+        ],
+
+        contactInfo: [
+            {
+                id: 1,
+                userId: 1,
+                phoneNumber: '82894327',
+                email: 'leo52@gmail.com',
+                street: 'Kunstbakken 57',
+                postalCode: '1234',
+                city: 'Bergen'
+            }
+        ],
+
+        listings: [
+            {
+                id: 1,
+                userId: 1,
+                salesFormId: 1,
+                categoryId: 1,
+                title: 'Mona Lisa',
+                price: '1000000',
+                conditionId: 3,
+                measurements: '77x53',
+                description: 'Maleri av en vakker dame',
+                story: 'the Mona Lisa is a likely a portrait of the wife of a Florentine merchant. For some reason however, the portrait was never delivered to its patron, and Leonardo kept it with him when he went to work for Francis I, the King of France. The Mona Lisas mysterious smile has inspired many writers, singers, and painters.',
+                pickup: false,
+                send: true,
+                dateListed: '25-03-2025',
+            },
+
+            {
+                id: 2,
+                userId: 2,
+                salesFormId: 2,
+                categoryId: 3,
+                title: 'Overlegen gutt',
+                price: '400',
+                conditionId: 4,
+                measurements: '14',
+                description: 'Overlegen gutt sittende på kant',
+                story: '',
+                pickup: true,
+                send: true,
+                dateListed: '26-03-2025',
+            }
+        ],
+
+        users: [
+            {
             id: 1,
-            userId: 1,
-            phoneNumber: '82894327',
-            email: 'leo52@gmail.com',
-            street: 'Kunstbakken 57',
-            postalCode: '1234',
-            city: 'Bergen'
-        }
-    ],
-    
+            isAdmin: false,
+            userName: 'Leo52',
+            firstName: 'Leonardo',
+            lastName: 'da Vinci',
+            password: 'Leoerbest',
+            image: null,
+            personalBio: 'Italiensk kunstner, ingeniør,skulptør og arkitekt',
+            rating: 4.7,
+            }
+        ],
 
-    listings: [
-        {
-            id: 1,
-            userId: 1,
-            salesFormId: 1,
-            categoryId: 1,
-            title: 'Mona Lisa',
-            price: '1000000',
-            conditionId: 3,
-            measurements: '77x53',
-            description: 'Maleri av en vakker dame',
-            story: 'the Mona Lisa is a likely a portrait of the wife of a Florentine merchant. For some reason however, the portrait was never delivered to its patron, and Leonardo kept it with him when he went to work for Francis I, the King of France. The Mona Lisas mysterious smile has inspired many writers, singers, and painters.',
-            pickup: false,
-            send: true,
-            dateListed: '25-03-2025',
-        },
+        liveAuctions: [
+            {
 
-
-        {
-            id: 2,
-            userId: 2,
-            salesFormId: 2,
-            categoryId: 3,
-            title: 'Overlegen gutt',
-            price: '400',
-            conditionId: 4,
-            measurements: '14',
-            description: 'Overlegen gutt sittende på kant',
-            story: '',
-            pickup: true,
-            send: true,
-            dateListed: '26-03-2025',
-        }],
-
-    users: [{
-        id: 1,
-        isAdmin: false,
-        userName: 'Leo52',
-        firstName: 'Leonardo',
-        lastName: 'da Vinci',
-        password: 'Leoerbest',
-        image: null,
-        personalBio: 'Italiensk kunstner, ingeniør,skulptør og arkitekt',
-        rating: 4.7,
-    }],
-
-
-
-
-
-    liveAuctions: [{
-
-    }]
+            }
+        ]
 
 
 
@@ -201,5 +199,5 @@ const model = {
 
 
 
-}
-}
+    }
+    }
