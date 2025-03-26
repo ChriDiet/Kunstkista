@@ -37,8 +37,11 @@ const model = {
                 firstName: null,
                 lastName: null,
                 email: null,
-                adress1: null,
-                adress2: null,
+                adress:{
+                    streetName: null,
+                    postalCode: null,
+                    city: null
+                }, 
                 phoneNumber: null,
                 password: null,
                 repeatPassword: null,
@@ -54,14 +57,11 @@ const model = {
                 condition: 'mint',
                 measurements: null,
                 description: null,
+                story: null,
                 pickup: false,
                 send: false,
                 images: null,
-                adress:{
-                    streetName: null,
-                    postalCode: null,
-                    city: null
-                }
+                
             },
 
             editUser:{
@@ -91,27 +91,73 @@ const model = {
         },
         
         data: {
+            condition:{
+                mint:'mint',
+                wellUsed:'well used',
+                gentlyUsed:'gently used',
+                poor:'poor',
             
+            },
+            
+                categories:[ 
+                    {id: 1, name: 'painting'},
+                    {id: 2, name: 'knitting'},
+                    {id: 3, name: 'figurine'},
+                    {id: 4, name: 'woodwork'},
+                    {id: 5, name: 'photos'},
+                    {id: 6, name: 'painting'}
+                    ],
+
+           
+
             
             listings:[{
-                id:'1',
+                id: 1,
+                userid: 1,
                 salesForm: 'sale',
-                category: null,
+                categoryId: 1,
                 title: 'Mona Lisa',
                 price: '1000000',
-                condition: null,
-                measurements: null,
-                description: null,
+                condition: 'gently used',
+                measurements: '77x53',
+                description: 'Maleri av en vakker dame',
+                story: 'the Mona Lisa is a likely a portrait of the wife of a Florentine merchant. For some reason however, the portrait was never delivered to its patron, and Leonardo kept it with him when he went to work for Francis I, the King of France. The Mona Lisas mysterious smile has inspired many writers, singers, and painters.',
                 pickup: false,
-                send: false,
-                images: null,
-                adress:{
-                    streetName: null,
-                    postalCode: null,
-                    city: null
-                }
-            ,
-
+                send: true,
+                images: [monalisa.jpg]},
+                
+                {
+                id:'2',
+                salesForm: 'sale',
+                categoryId: 3,
+                title: 'Overlegen gutt',
+                price: '400',
+                condition: 'poor',
+                measurements: '14',
+                description: 'Overlegen gutt sittende på kant',
+                story: '',
+                pickup: true,
+                send: true,
+                images: [Overlegengutt.jpg],
+            }],
+            
+            users:[{
+                isAdmin: false,
+                userName: 'Leo52',
+                firstName: 'Leonardo',
+                lastName: 'da Vinci',
+                email: 'Leo52@gmail.com',
+                adress: {
+                    streetName: 'Kunstsvingen 17',
+                    postalCode: '4321',
+                    city: 'Molde'
+                },
+                adress2: null,
+                phoneNumber: '12345688',
+                password: 'Leoerbest',
+                image: null,    
+                personalBio: 'Italiensk kunstner, ingeniør,skulptør og arkitekt',
+                rating: 4.7,
             }]
 
 
