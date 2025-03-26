@@ -26,7 +26,7 @@ const model = {
         },
 
         inAuctions: {
-            newBid: null
+            bid: null
         },
 
         logIn: {
@@ -193,12 +193,49 @@ const model = {
         liveAuctions: [
             {
                 id: 1,
-                approvedAuctionId: 1
+                approvedAuctionId: 1,
             },
             {
                 id: 1,
                 approvedAuctionId: 2
             } 
-        ]
+        ],
+
+        // auctions: [
+        //     { 
+        //         id: 1,
+        //         listingId: 1,
+        //         live: false
+        //     }
+        // ],
+
+
+
+        bid: [
+            {
+                id: 1,
+                liveAuctionId: 1,
+                userId: 1,
+                date: '20-03-2025',
+                timeStamp: '10:30',
+                bid: 123,
+            },
+            {
+                id: 2,
+                liveAuctionId: 1,
+                userId: 2,
+                date: '20-03-2025',
+                timeStamp: '10:35',
+                bid: 150,
+            },
+            {
+                id: 3,
+                liveAuctionId: 2,
+                userId: 3,
+                date: '20-03-2025',
+                timeStamp: '10:35',
+                bid: 1500,
+            }
+        ]   
     }
 }
