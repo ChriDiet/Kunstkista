@@ -14,7 +14,8 @@ const model = {
             newSale: 'newSale',
             productPageCustomer: 'productPageCustomer',
             productCategory: 'productCategory',
-            adminApprovalPage: 'adminApprovalPage',
+            adminApprovalPage: 'adminApprovalPage', 
+            userContactInfo: 'contactInfo' 
         },
         isLoggedIn: false,
     },
@@ -85,7 +86,11 @@ const model = {
             send: false,
             city: null,
             condition: null,
-        }
+        },
+
+        userContactInfo: {
+            message: null,
+            subject: null
     },
 
     data: {
@@ -193,6 +198,6 @@ const model = {
             {
                 id: 1,
                 approvedAuctionId: 2
-            }
+            } 
         ]
     }
