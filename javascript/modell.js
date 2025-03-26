@@ -166,38 +166,35 @@ const model = {
 
         users: [
             {
-            id: 1,
-            isAdmin: false,
-            userName: 'Leo52',
-            firstName: 'Leonardo',
-            lastName: 'da Vinci',
-            password: 'Leoerbest',
-            image: null,
-            personalBio: 'Italiensk kunstner, ingeniør,skulptør og arkitekt',
-            rating: 4.7,
+                id: 1,
+                isAdmin: false,
+                userName: 'Leo52',
+                firstName: 'Leonardo',
+                lastName: 'da Vinci',
+                password: 'Leoerbest',
+                image: null,
+                personalBio: 'Italiensk kunstner, ingeniør,skulptør og arkitekt',
+                rating: 4.7,
+            }
+        ],
+
+        approvedAuctions: [
+            { 
+                id: 1,
+                listingId: 1,
             }
         ],
 
         liveAuctions: [
             {
-
+                id: 1,
+                approvedAuctionId: 1
+            },
+            {
+                id: 1,
+                approvedAuctionId: 2
             }
         ]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
-    }
+
+    
