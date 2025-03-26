@@ -209,8 +209,6 @@ const model = {
         //     }
         // ],
 
-
-
         bid: [
             {
                 id: 1,
