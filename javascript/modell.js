@@ -110,8 +110,9 @@ const model = {
 
            
 
-            
-            listings:[{
+        
+            listings:[
+                {
                 id: 1,
                 userid: 1,
                 salesForm: 'sale',
@@ -124,7 +125,8 @@ const model = {
                 story: 'the Mona Lisa is a likely a portrait of the wife of a Florentine merchant. For some reason however, the portrait was never delivered to its patron, and Leonardo kept it with him when he went to work for Francis I, the King of France. The Mona Lisas mysterious smile has inspired many writers, singers, and painters.',
                 pickup: false,
                 send: true,
-                images: [monalisa.jpg]},
+                images: [monalisa.jpg]
+                },
                 
                 {
                 id:'2',
@@ -139,7 +141,7 @@ const model = {
                 pickup: true,
                 send: true,
                 images: [Overlegengutt.jpg],
-            }],
+                }],
             
             users:[{
                 isAdmin: false,
