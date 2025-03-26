@@ -47,11 +47,11 @@ const model = {
             },
 
             newListing:{
-                salesForm: null,
+                salesForm: 'sale',
                 category: null,
                 title: null,
                 price: null,
-                condition: null,
+                condition: 'mint',
                 measurements: null,
                 description: null,
                 pickup: false,
@@ -74,18 +74,45 @@ const model = {
                 editBio: null,
                 editProfilePicture: null,
                 editCity: null,
-                editName: null
+                editDisplayName: null
+            },
+            productCategory:{
+                pageIndex: "1",
+                sort:null,
+                filter:{
+                    minPrice: null,
+                    maxPrice: null,
+                    pickUp: true,
+                    send: false,
+                    city: null,
+                    condition: null,
+                }
             }
-
-
-
-
-
-
-
         },
         
-        data: [{
+        data: {
+            
+            
+            listings:[{
+                id:'1',
+                salesForm: 'sale',
+                category: null,
+                title: 'Mona Lisa',
+                price: '1000000',
+                condition: null,
+                measurements: null,
+                description: null,
+                pickup: false,
+                send: false,
+                images: null,
+                adress:{
+                    streetName: null,
+                    postalCode: null,
+                    city: null
+                }
+            ,
+
+            }]
 
 
 
@@ -102,5 +129,5 @@ const model = {
 
 
 
-    }]
+    }
 }
