@@ -15,7 +15,9 @@ const model = {
             productPageCustomer: 'productPageCustomer',
             productCategory: 'productCategory',
             adminApprovalPage: 'adminApprovalPage', 
-            userContactInfo: 'contactInfo' 
+            userContactInfo: 'contactInfo' ,
+            adminAuctionPageApproval: 'adminAuctionPageApproval'
+            adminProductPageApproval: 'adminProductPageApproval'
         },
         isLoggedIn: false,
         isAuctionLive: false,
