@@ -1,3 +1,45 @@
+/* app */
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-width: 600px;
+}
+
+/* header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu,
+.logo,
+.searchbar,
+.userprofile {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+input {
+  margin-left: 1rem;
+}
+
+.userprofile {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: end;
+}
+.userprofile img{
+  flex: 1;
+  width: 55px;
+  height: 55px;
+} 
+
+
 body {
   font-family: 'Arial', sans-serif;
   background-color: #f4f4f4;
@@ -71,8 +113,8 @@ main {
 
 .gallery-item-content {
 
-    padding: 15px; 
-    text-align: center;
+  padding: 15px;
+  text-align: center;
 }
 
 .gallery-item-content h3 {
