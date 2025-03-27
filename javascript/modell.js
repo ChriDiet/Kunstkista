@@ -16,7 +16,7 @@ const model = {
             productCategory: 'productCategory',
             adminApprovalPage: 'adminApprovalPage', 
             userContactInfo: 'contactInfo' ,
-            adminAuctionPageApproval: 'adminAuctionPageApproval'
+            adminAuctionPageApproval: 'adminAuctionPageApproval',
             adminProductPageApproval: 'adminProductPageApproval'
         },
         isLoggedIn: false,
@@ -195,7 +195,7 @@ const model = {
                 id: 2,
                 postalCode: 4321
             }
-        ]
+        ],
 
         auctions: [
             { 
