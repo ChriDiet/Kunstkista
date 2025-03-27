@@ -18,6 +18,7 @@ const model = {
             userContactInfo: 'contactInfo' 
         },
         isLoggedIn: false,
+        isAuctionLive: false,
     },
 
     input: {
@@ -123,18 +124,6 @@ const model = {
             { id: 2, listingId: 2, url: 'overlegengutt.jpg' },
         ],
 
-        contactInfo: [
-            {
-                id: 1,
-                userId: 1,
-                phoneNumber: '82894327',
-                email: 'leo52@gmail.com',
-                street: 'Kunstbakken 57',
-                postalCode: '1234',
-                city: 'Bergen'
-            }
-        ],
-
         listings: [
             {
                 id: 1,
@@ -149,7 +138,7 @@ const model = {
                 story: 'the Mona Lisa is a likely a portrait of the wife of a Florentine merchant. For some reason however, the portrait was never delivered to its patron, and Leonardo kept it with him when he went to work for Francis I, the King of France. The Mona Lisas mysterious smile has inspired many writers, singers, and painters.',
                 pickup: false,
                 send: true,
-                dateListed: '25-03-2025',
+                dateListed: '2025-03-26',
             },
 
             {
@@ -165,7 +154,7 @@ const model = {
                 story: '',
                 pickup: true,
                 send: true,
-                dateListed: '26-03-2025',
+                dateListed: '2025-03-26',
             }
         ],
 
@@ -183,55 +172,56 @@ const model = {
             }
         ],
 
-        approvedAuctions: [
-            { 
+        userContactInfos: [
+            {
                 id: 1,
-                listingId: 1,
+                userId: 1,
+                phoneNumber: '82894327',
+                email: 'leo52@gmail.com',
+                street: 'Kunstbakken 57',
+                postalCodeId: 1,
+                city: 'Bergen'
             }
         ],
 
-        liveAuctions: [
+        postalCode: [
             {
                 id: 1,
-                approvedAuctionId: 1,
+                postalCode: 1234
             },
             {
+                id: 2,
+                postalCode: 4321
+            }
+        ]
+
+        auctions: [
+            { 
                 id: 1,
-                approvedAuctionId: 2
-            } 
+                listingId: 1
+            }
         ],
 
-        // auctions: [
-        //     { 
-        //         id: 1,
-        //         listingId: 1,
-        //         live: false
-        //     }
-        // ],
-
-        bid: [
+        bids: [
             {
                 id: 1,
                 liveAuctionId: 1,
                 userId: 1,
-                date: '20-03-2025',
-                timeStamp: '10:30',
+                date: '2025-03-27T10:30:30Z',
                 bid: 123,
             },
             {
                 id: 2,
                 liveAuctionId: 1,
                 userId: 2,
-                date: '20-03-2025',
-                timeStamp: '10:35',
+                date: '2025-03-27T11:30:30Z',
                 bid: 150,
             },
             {
                 id: 3,
                 liveAuctionId: 2,
                 userId: 3,
-                date: '20-03-2025',
-                timeStamp: '10:35',
+                date: '2025-03-27T10:35:30Z',
                 bid: 1500,
             }
         ]   
