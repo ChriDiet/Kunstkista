@@ -94,7 +94,7 @@ const model = {
         userContactInfo: {
             message: null,
             subject: null
-    },
+    }},
 
     data: {
 
@@ -104,7 +104,7 @@ const model = {
             { id: 3, condition: 'gently used' },
             { id: 4, condition: 'poor' },
         ],
-    },
+    
 
         categories: [
             { id: 1, name: 'painting' },
