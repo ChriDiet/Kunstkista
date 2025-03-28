@@ -23,7 +23,7 @@ function drawRegisterUserHtml(){
     <input placeholder="Passord"><br/>
     <input placeholder="Gjenta passord"><br/>
     <div>Logg direkte inn</div><br/>
-    <button>Fullfør registreringen</button>
+    <button onclick="registerUser()">Fullfør registreringen</button>
     `;
     
     
