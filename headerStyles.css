@@ -1,0 +1,97 @@
+/* app */
+
+#app {
+   display: flex;
+   flex-direction: column;
+   min-width: 600px;
+}
+
+/* header */
+.header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.menuButtons,
+.logo,
+.searchbar,
+.userprofile {
+   flex: 1;
+   display: flex;
+   justify-content: space-between;
+   gap: 1rem;
+   align-items: center;
+}
+
+.searchbar{
+   align-items: center;
+   justify-content: center;
+}
+
+.homeButton {
+   height: 30px;
+}
+
+.menuButtons button {
+   border: none;
+   background-color: transparent;
+}
+
+.logo {
+   margin: 4vw;
+   font-size: 25px;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.logIn {
+   display: flex;
+   flex: 1;
+   flex-direction: column;
+   align-items: end;
+   margin-right: 4vw;
+}
+
+.logIn img {
+   width: 40px;
+   height: 40px;
+}
+
+/* homeView */
+
+.auctionHeader {
+   display: flex;
+   flex-direction: column;
+   background-color: rgb(146, 143, 143);
+   align-items: center;
+}
+.auctionHeader img {
+   width: 200px;
+}
+
+.auctionCounting {
+   font-size: 25px;
+   text-align: center;
+}
+
+.auctionImgContainer {
+   display: flex;
+}
+
+.newArtContainer {
+   display: flex;
+   justify-content: center;
+}
+
+.newArt {
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+   width: 80%;
+   justify-items: center;
+   gap: 10px;
+}
+
+.newArt img {
+   width: 200px;
+   flex: 1;
+};
