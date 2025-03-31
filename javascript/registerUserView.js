@@ -1,7 +1,7 @@
 registerUserView()
 function registerUserView(){
     document.getElementById('app').innerHTML = /*HTML*/`
-    ${drawRegisterUserHtml()};
+    ${drawRegisterUserHtml()}
     
     
     
@@ -20,8 +20,8 @@ function drawRegisterUserHtml(){
     <input id="postalCode" placeholder="Postnummer"><br/>
     <input id="city" placeholder="By"><br/>
     <input id="phoneNumber" placeholder="Telefon nummer"><br/>
-    <input id="password" placeholder="Passord"><br/>
-    <input id="repeatPass" placeholder="Gjenta passord"><br/>
+    <input type="password" id="password" placeholder="Passord"><br/>
+    <input type="password" id="repeatPass" placeholder="Gjenta passord"><br/>
     <div>Logg direkte inn</div><br/>
     <button onclick="registerUser()">Fullfør registreringen</button>
     `;
