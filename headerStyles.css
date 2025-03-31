@@ -96,19 +96,25 @@
 .newArtContainer {
    display: flex;
    justify-content: center;
+   text-align: center;
 }
 
 .newArt {
    display: grid;
-   grid-template-columns: repeat(4,1fr);
+   grid-template-columns: repeat(4,200px);
    width: 80%;
    justify-items: center;
-   gap: 10px;
+   gap: 2vw;
+   
 }
 
-.newArt img {
-   width: 200px;
-   flex: 1;
+.newArtContainer {
+   height: 250px;
+   padding: 2vw;
+}
+
+.newArtContainer img {
+   height: 200px;
 }
 
 h2 {
