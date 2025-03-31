@@ -107,11 +107,14 @@ const model = {
     
 
         categories: [
-            { id: 1, name: 'painting' },
-            { id: 2, name: 'knitting' },
-            { id: 3, name: 'figurine' },
-            { id: 4, name: 'woodwork' },
+            { id: 1, name: 'paintings' },
+            { id: 2, name: 'knittings' },
+            { id: 3, name: 'figurines' },
+            { id: 4, name: 'woodworks' },
             { id: 5, name: 'photos' },
+            { id: 6, name: 'turnedBowls' },
+            { id: 7, name: 'rosepaintings' },
+            { id: 8, name: 'writings' },
         ],
 
         salesForm: [
@@ -120,10 +123,14 @@ const model = {
         ],
 
         listingImages: [
-            { id: 1, listingId: 1, url: 'monalisa.jpg' },
-            { id: 2, listingId: 1, url: 'monalisa1.jpg' },
-            { id: 3, listingId: 1, url: 'monalisa2.jpg' },
-            { id: 2, listingId: 2, url: 'overlegengutt.jpg' },
+            { id: 1, listingId: 1, url: './images/monalisa.jpg' },
+            { id: 2, listingId: 2, url: './images/overlegengutt.jpg' },
+            { id: 3, listingId: 3, url: './images/mariusgenser.jpg' },
+            { id: 4, listingId: 4, url: './images/dreidboller.jpg' },
+            { id: 5, listingId: 5, url: './images/isbjorner.jpg' },
+            { id: 6, listingId: 6, url: './images/skrik.jpg' },
+            { id: 7, listingId: 7, url: './images/votter.jpeg' },
+            { id: 8, listingId: 8, url: './images/rosemaling.jpg' },
         ],
 
         listings: [
@@ -133,7 +140,7 @@ const model = {
                 salesFormId: 1,
                 categoryId: 1,
                 title: 'Mona Lisa',
-                price: '1000000',
+                price: '1 000 000',
                 conditionId: 3,
                 measurements: '77x53',
                 description: 'Maleri av en vakker dame',
@@ -146,17 +153,113 @@ const model = {
             {
                 id: 2,
                 userId: 2,
-                salesFormId: 2,
-                categoryId: 3,
+                salesFormId: 1,
+                categoryId: 2,
                 title: 'Overlegen gutt',
                 price: '400',
-                conditionId: 4,
+                conditionId: 2,
                 measurements: '14',
                 description: 'Overlegen gutt sittende på kant',
                 story: '',
                 pickup: true,
                 send: true,
                 dateListed: '2025-03-26',
+            },
+
+            {
+                id: 3,
+                userId: 3,
+                salesFormId: 1,
+                categoryId: 3,
+                title: 'Mariusgenser',
+                price: '2400',
+                conditionId: 1,
+                measurements: '123 x 70',
+                description: 'Hjemmestrikket mariusgenser',
+                story: '',
+                pickup: true,
+                send: true,
+                dateListed: '2025-03-30',
+            },
+
+            {
+                id: 4,
+                userId: 4,
+                salesFormId: 1,
+                categoryId: 6,
+                title: 'Trebolle',
+                price: '1400',
+                conditionId: 1,
+                measurements: '123 x 70',
+                description: 'Dreid bolle i tre',
+                story: '',
+                pickup: false,
+                send: true,
+                dateListed: '2025-03-31',
+            },
+
+            {
+                id: 5,
+                userId: 4,
+                salesFormId: 1,
+                categoryId: 2,
+                title: 'Isbjørner i  tre',
+                price: '950',
+                conditionId: 3,
+                measurements: '10 x 20',
+                description: 'Håndlaget isbjørner i tre',
+                story: '',
+                pickup: false,
+                send: true,
+                dateListed: '2025-03-30',
+            },
+
+            {
+                id: 6,
+                userId: 5,
+                salesFormId: 1,
+                categoryId: 2,
+                title: 'Skrik',
+                price: '550',
+                conditionId: 1,
+                measurements: '91 x 73',
+                description: 'Gammelt bilde malt med fettstift på papp',
+                story: '',
+                pickup: true,
+                send: false,
+                dateListed: '2025-03-19',
+            },
+
+            {
+                id: 7,
+                userId: 3,
+                salesFormId: 1,
+                categoryId: 2,
+                title: 'Stjerne votter',
+                price: '500',
+                conditionId: 3,
+                measurements: '18 x 10',
+                description: 'Hjemmestrikket ullvotter',
+                story: '',
+                pickup: true,
+                send: false,
+                dateListed: '2025-03-17',
+            }, 
+
+            {
+                id: 8,
+                userId: 4,
+                salesFormId: 1,
+                categoryId: 1,
+                title: 'Gammel rosemalt kiste',
+                price: '1550',
+                conditionId: 4,
+                measurements: '91 x 73',
+                description: 'Gammel rosemalt kiste',
+                story: 'Den gamle rosemalte kisten ble laget for over hundre år siden av en bygdesnekker som ville fri til sin kjære. Han dekorerte den med vakre blomster og mønstre, hver linje et symbol på hans kjærlighet. Men kisten ble aldri hentet – jenta forsvant før han rakk å gi den bort. Siden den gang har kisten gått i arv, bærende på en historie om kjærlighet, håp og tapt tid.',
+                pickup: true,
+                send: false,
+                dateListed: '2025-03-19',
             }
         ],
 
@@ -171,6 +274,66 @@ const model = {
                 image: null,
                 personalBio: 'Italiensk kunstner, ingeniør,skulptør og arkitekt',
                 rating: 4.7,
+            },
+
+            {
+                id: 2,
+                isAdmin: false,
+                userName: 'CarlLars',
+                firstName: 'Carl',
+                lastName: 'Larsson',
+                password: 'Carl81',
+                image: null,
+                personalBio: 'Lager figurer',
+                rating: 4.5,
+            },
+
+            {
+                id: 3,
+                isAdmin: false,
+                userName: 'KariNordmann',
+                firstName: 'Kari',
+                lastName: 'Nordmann',
+                password: 'passord123',
+                image: null,
+                personalBio: 'Jeg elsker å strikke. Mormor til to gutter på 3år og 5år<3',
+                rating: 4.9,
+            },
+
+            {
+                id: 4,
+                isAdmin: false,
+                userName: 'TreKongen',
+                firstName: 'Torfinn',
+                lastName: 'Hansen',
+                password: 'kongen68',
+                image: null,
+                personalBio: 'Lager flotte ting ut av tre',
+                rating: 4.6,
+            },
+
+            {
+                id: 5,
+                isAdmin: false,
+                userName: 'EddieTheArtist',
+                firstName: 'Edvard',
+                lastName: 'Munch',
+                password: 'fettstift123',
+                image: null,
+                personalBio: 'Maler',
+                rating: 4.9,
+            },
+
+            {
+                id: 6,
+                isAdmin: false,
+                userName: 'Marie91',
+                firstName: 'Marie',
+                lastName: 'Almasen',
+                password: 'Agrfh7eW3',
+                image: null,
+                personalBio: 'Lager alt mulig rart',
+                rating: 4.8,
             }
         ],
 
@@ -183,6 +346,56 @@ const model = {
                 street: 'Kunstbakken 57',
                 postalCodeId: 1,
                 city: 'Bergen'
+            },
+
+            {
+                id: 2,
+                userId: 2,
+                phoneNumber: '48125075',
+                email: 'calarsson@gmail.com',
+                street: 'Kunstbakken 53',
+                postalCodeId: 1,
+                city: 'Bergen'
+            },
+
+            {
+                id: 3,
+                userId: 3,
+                phoneNumber: '91542789',
+                email: 'karino@gmail.com',
+                street: 'Kongens gate 17',
+                postalCodeId: 3,
+                city: 'Oslo'
+            },
+
+            {
+                id: 4,
+                userId: 4,
+                phoneNumber: '45892156',
+                email: 'thansen@gmail.com',
+                street: 'Tresvingen 6',
+                postalCodeId: 3,
+                city: 'Oslo'
+            },
+
+            {
+                id: 5,
+                userId: 5,
+                phoneNumber: '63254786',
+                email: 'munched@gmail.com',
+                street: 'Maleriveien 82',
+                postalCodeId: 4,
+                city: 'Trondheim'
+            },
+
+            {
+                id: 6,
+                userId: 6,
+                phoneNumber: '83469783',
+                email: 'mariealma@gmail.com',
+                street: 'Kunsttunet 73',
+                postalCodeId: 4,
+                city: 'Trondheim'
             }
         ],
 
@@ -191,9 +404,20 @@ const model = {
                 id: 1,
                 postalCode: 1234
             },
+
             {
                 id: 2,
                 postalCode: 4321
+            },
+
+            {
+                id: 3,
+                postalCode: 1354
+            },
+
+            {
+                id: 4,
+                postalCode: 4531
             }
         ],
 
