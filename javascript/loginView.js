@@ -1,6 +1,7 @@
-createLogInView();
+
 function createLogInView(){
     document.getElementById('app').innerHTML = /*HTML*/`
+    ${createHeader()}
     ${drawLogInHtml()}
     
     
@@ -10,12 +11,25 @@ function createLogInView(){
 function drawLogInHtml(){
     return /*HTML*/`
     <h2>Logg inn</h2>
-    <img src="images/profilePicPlaceHolder.png"><br/>
-    <input placeholder="brukernavn"><br/>
-    <input type="password" placeholder="passord"><br/>
-    <div>Glemt passord?</div>
-    <button onclick="logIn()">Logg inn</button>
-    <div>registrer ny bruker</div>
+    <div class="logInContainer">
+        <img src="images/profilePicPlaceHolder.png"><br/>
+        <input
+             placeholder="brukernavn"
+             value="${model.input.logIn.userName}"
+             oninput="model.input.logIn.userName = this.value">
+             <br/>
+             
+        <input 
+            type="password" 
+            placeholder="passord"
+            value="${model.input.logIn.userName}"
+            oninput="model.input.logIn.userName = this.value">
+            <br/>
+
+        <div>Glemt passord?</div>
+        <button onclick="logIn()">Logg inn</button>
+        <div onclick="registerUserView()">registrer ny bruker</div>
+    </div>
     `;
 }
 
