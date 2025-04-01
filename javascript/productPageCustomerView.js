@@ -1,16 +1,18 @@
 function showProductPageCustomerView() {
    return /*HTML*/ `
       <div class="productPageContainer">
-         
+
          <div class="infoHeader">
-            <button><-</button>
             <div class="productInfoContainer top">
-               <p>Kategori: Maleri</p>
-               <p>Mona Lisa</p>
-               <p>Maleri av en vakker dame</p>
+               <div>
+                  <button><-</button>
+                  <p class="smallFont">Kategori: <u>Maleri</u></p>
+               </div>
+               <p class="largeFont">Mona Lisa</p>
+               <p class="mediumFont">Maleri av en vakker dame</p>
             </div>
-            <div class="userInfo top">
-               <p>Leonardo da Vinci &#10003</p>
+            <div class="userInfo top mediumFont">
+               <p class="link">Leonardo da Vinci &#10003</p>
                <p>&#9733 3.5 av 5</p>
                <p>&#128205 Bergen</p>
             </div>
@@ -29,15 +31,15 @@ function showProductPageCustomerView() {
 
          <div class="productInfoContainer bottom">
             <div class="productInfo bottom">
-               <h3>Informasjon</h3>
-               <p>Tilstand: Godt brukt</p>
-               <p>Mål: 21 x 30 cm</p>
-               <p>Kan hentes: Ja</p>
-               <p>Kan sendes: Ja</p>
+               <h3 class="largeFont">Informasjon</h3>
+               <p class="mediumFont">Tilstand: Godt brukt</p>
+               <p class="mediumFont">Mål: 21 x 30 cm</p>
+               <p class="mediumFont">Kan hentes: Ja</p>
+               <p class="mediumFont">Kan sendes: Ja</p>
             </div>
             <div class="priceAndContact">
-               <p>Pris: 2599,-</p>
-               <button>Kontakt selger</button>
+               <p class="largeFont">Pris: 2599,-</p>
+               <button class="medium font">Kontakt selger</button>
             </div>
          </div>
       </div>
