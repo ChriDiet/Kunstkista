@@ -14,12 +14,14 @@ function drawLogInHtml(){
     <div class="logInContainer">
         <img src="images/profilePicPlaceHolder.png"><br/>
         <input
-             placeholder="brukernavn"
+            id="userName" 
+            placeholder="brukernavn"
              value="${model.input.logIn.userName}"
              oninput="model.input.logIn.userName = this.value">
              <br/>
              
         <input 
+            id="password"
             type="password" 
             placeholder="passord"
             value="${model.input.logIn.userName}"
