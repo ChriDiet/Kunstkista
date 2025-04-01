@@ -425,6 +425,14 @@ const model = {
             { 
                 id: 1,
                 listingId: 1
+            },
+            { 
+                id: 2,
+                listingId: 2
+            },
+            { 
+                id: 3,
+                listingId: 3
             }
         ],
 
