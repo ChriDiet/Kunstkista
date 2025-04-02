@@ -10,8 +10,8 @@ function showHomeView() {
             <div>></div>
          </div>
          <div class="info">
-            <p>Productname</p>
-            <p>Price: 200kr</p>
+            <p>Produktnavn</p>
+            <p>Startpris: 200kr</p>
          </div>
       </div>
    </div>

@@ -1,4 +1,4 @@
-registerUserView()
+
 function registerUserView(){
     document.getElementById('app').innerHTML = /*HTML*/`
     ${drawRegisterUserHtml()}

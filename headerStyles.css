@@ -1,16 +1,20 @@
-/* app */
-
+/* App */
 #app {
    display: flex;
    flex-direction: column;
    min-width: 600px;
 }
 
-/* header */
+body {
+   margin: 0px;
+}
+
+/* HEADER */
 .header {
    display: flex;
    justify-content: space-between;
    align-items: center;
+   font-size: calc(0.5vw + 0.5rem);
 }
 
 .menuButtons,
@@ -24,7 +28,7 @@
    align-items: center;
 }
 
-.searchbar{
+.searchbar {
    align-items: center;
    justify-content: center;
 }
@@ -36,9 +40,12 @@
 .menuButtons button {
    border: none;
    background-color: transparent;
+   font-size: calc(0.5vw + 1rem);
+   cursor: pointer;
 }
 
 .logo {
+   cursor: pointer;
    margin: 4vw;
    font-size: 25px;
    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -50,6 +57,7 @@
    flex-direction: column;
    align-items: end;
    margin-right: 4vw;
+   cursor: pointer;
 }
 
 .logIn img {
@@ -57,32 +65,38 @@
    height: 40px;
 }
 
-/* homeView */
+.logIn p {
+   margin: 0px;
+}
+
+/* HOMEVIEW */
 
 .auctionHeader {
    display: flex;
    flex-direction: column;
    background-color: rgb(146, 143, 143);
    align-items: center;
+   font-size: calc(0.5vw + 1rem);
 }
+
 .auctionHeader img {
-   width: 300px;
+   width: 60%;
 }
 
 .auctionCounting {
-   font-size: 25px;
+   font-size: calc(1vw + 1rem);
    text-align: center;
 }
 
 .auctionImgContainer {
    display: flex;
-   align-items: center;
    flex-direction: column;
+   align-items: center;
 }
 
 .info {
    display: flex;
-   width: 200px;
+   width: 50%;
    justify-content: space-between;
 }
 
@@ -91,32 +105,164 @@
    display: flex;
    align-items: center;
    gap: 10px;
-} 
+   justify-content: center;
+}
 
 .newArtContainer {
    display: flex;
    justify-content: center;
    text-align: center;
+   padding: 2vw;
 }
 
 .newArt {
    display: grid;
-   grid-template-columns: repeat(4,200px);
+   grid-template-columns: repeat(auto-fit, 350px);
    width: 80%;
-   justify-items: center;
-   gap: 2vw;
-   
-}
-
-.newArtContainer {
-   height: 250px;
-   padding: 2vw;
+   justify-content: center;
+   gap: 1vw;
 }
 
 .newArtContainer img {
-   height: 200px;
+   height: 250px;
+   padding: 0.5vw;
 }
 
 h2 {
    text-align: center;
+   font-size: calc(1vw + 1rem);
+}
+
+.artContainer {
+   border: 2px solid black;
+}
+
+/* LOGIN VIEW */
+
+/* .logInContainer {
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   background-color: rgb(210, 209, 209);
+   padding: 2vw;
+}
+.logInContainer div {
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   min-width: 20%;
+   padding: 1vw;
+   border-radius: 1vw;
+   background-color: rgb(240, 240, 240);
+}
+
+.logInImage {
+   width: 300px;
+}
+
+.link {
+   text-decoration: underline;
+   font-size: calc(0.5vw + 0.6rem);
+   cursor: pointer;
+}
+
+.placeholderText {
+   font-size: calc(0.5vw + 0.5rem);
+}
+
+input, button {
+   font-size: calc(0.5vw + 0.5rem)
+}  
+ */
+
+/*PRODUCTPAGE*/
+
+.smallFont {
+   font-size: calc(0.5vw + 0.5rem);
+}
+
+.mediumFont {
+   font-size: calc(0.7vw + 0.7rem);
+}
+
+.largeFont {
+   font-size: calc(1vw + 1rem);
+}
+
+.link {
+   text-decoration: underline;
+}
+
+.productPageContainer {
+   display: flex;
+   flex-direction: column;
+   align-content: center;
+   align-items: center;
+}
+
+.infoHeader {
+   display: flex;
+   justify-content: space-between;
+   padding: 0.5rem;
+   width: 90%;
+}
+
+.productInfoContainer div {
+   display: flex;
+   gap: 1rem;
+}
+
+.productInfoContainer.top {
+   flex: 1;
+}
+
+.productInfoContainer.top p {
+
+}
+
+.userInfo.top {
+   display: flex;
+   align-items: center;
+   flex: 2;
+   gap: 1.5rem;
+}
+
+.userInfo.top p {
+
+}
+
+.imageContainer.productPage {
+   display: flex;
+   flex-direction: column;
+   width: 80%;
+}
+
+.bigImage.productPage {
+   border: 3px solid yellow;
+}
+
+.bigImage.productPage img {
+   height: 35vw;
+}
+
+.smallImages.productPage {
+   display: flex;
+   border: 3px solid orange;
+   gap: 5px;
+}
+
+.smallImages.productPage img {
+   height: 20vw;
+}
+
+.productInfoContainer.bottom {
+
+}
+
+.productInfo.bottom {
+   
+}
+
+.priceAndContact {
+
 }
