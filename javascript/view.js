@@ -42,7 +42,7 @@ function changeView() {
          break; 
       
       case page.registerUser:
-         currentView = showRegisterUserView();
+         currentView = drawRegisterUserHtml();
          break;
 
       case page.editUser:
