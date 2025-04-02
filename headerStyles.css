@@ -1,4 +1,9 @@
 /* App */
+
+* {
+   box-sizing: border-box;
+}
+
 #app {
    display: flex;
    flex-direction: column;
@@ -204,7 +209,7 @@ input, button {
    display: flex;
    justify-content: space-between;
    padding: 0.5rem;
-   width: 90%;
+   width: 80%;
 }
 
 .productInfoContainer div {
@@ -233,36 +238,51 @@ input, button {
 
 .imageContainer.productPage {
    display: flex;
-   flex-direction: column;
+   max-height: 600px;
    width: 80%;
 }
 
+.bigImage.productPage,
+.smallImages.productPage {
+   display: flex;
+   gap: 0.5vw;
+}
+
 .bigImage.productPage {
-   border: 3px solid yellow;
+   max-width: 30%;
 }
 
 .bigImage.productPage img {
-   height: 35vw;
+   border: 0.7vw solid black;
+   padding: 0.5vw;
 }
 
 .smallImages.productPage {
-   display: flex;
-   border: 3px solid orange;
-   gap: 5px;
+   flex-direction: column;
+   align-items: start;
+   justify-content: center;
 }
 
+
 .smallImages.productPage img {
-   height: 20vw;
+   height: 32%;
+   padding: 0.3vw;
+   border: 0.5vw solid black;
 }
 
 .productInfoContainer.bottom {
-
+   display: flex;
+   border: 3px solid orange;
+   justify-content: space-between;
+   width: 80%;
 }
 
 .productInfo.bottom {
-   
+   display: grid;
+   grid-template-columns: 1fr 1fr;
 }
 
 .priceAndContact {
-
+   display: flex;
+   flex-direction: column;
 }
