@@ -1,5 +1,5 @@
 function updateView() {
    document.getElementById('app').innerHTML = /*HTML*/`
    ${createHeader()}
-   ${showHomeView()}`;
+   ${showauctions()}`;
 }
