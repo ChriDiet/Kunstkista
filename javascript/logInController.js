@@ -2,8 +2,13 @@ function logIn(){
     document.getElementById('userName').value;
     document.getElementById('password').value;
 
-    if(model.input.logIn.userName && model.input.logIn.password === true){
-        model.app.isLoggedIn = true;
+    for(let users of model.data.users){
+        if(users.userName === model.data.users.userName
+            && users.password === model.data.users.password
+        ){
+            model.data.users.id == model.app.isLoggedIn
+            model.app.isLoggedIn = true
+        }
     }
 
 

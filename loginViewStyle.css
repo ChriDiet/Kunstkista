@@ -1,0 +1,31 @@
+.logInContainer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(210, 209, 209);
+    padding: 2vb;
+        
+}
+
+.logInContainer div{
+    display: flex;
+   align-items: center;
+   flex-direction: column;
+   min-width: 20%;
+   padding: 1vw;
+   border-radius: 1vw;
+   background-color: rgb(240, 240, 240);
+   
+}
+
+.loginImage{
+    width: 300px;
+}
+
+input, button {
+    font-size: calc(0.5vw + 0.5rem)
+ } 
+
+ .placeholderText {
+    font-size: calc(0.5vw + 0.5rem);
+ }

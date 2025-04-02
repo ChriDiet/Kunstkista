@@ -1,104 +1,109 @@
 
 function registerUserView(){
     document.getElementById('app').innerHTML = /*HTML*/`
+    ${createHeader()}
     ${drawRegisterUserHtml()}
     
-    
-    
     `;
+    
+    
 }
 
 
 function drawRegisterUserHtml(){
     return /*HTML*/`
     <h2>Fyll ut feltene for registrering:</h2><br/>
+    <div class="registerUserContainer">
+    <div>
     <input 
-        id="userName"
-        placeholder="Brukernavn"
-        value="${model.input.registerUser.userName}"
-        oninput="model.input.registerUser.userName = this.value"
-        required>
-        <br/>
-       
+    id="userName"
+    placeholder="Brukernavn"
+    value="${model.input.registerUser.userName ?? ''}"
+    oninput="model.input.registerUser.userName = this.value"
+    required>
+    <br/>
+    
     <input id="foreName"
         placeholder="Fornavn"
-        value="${model.input.registerUser.firstName}"
+        value="${model.input.registerUser.firstName ?? ''}"
         oninput="model.input.registerUser.firstName = this.value"
         required>
         <br/>
-
-    <input 
+        
+        <input 
         id="lastName"
         placeholder="Etternavn"
-        value="${model.input.registerUser.lastName}"
+        value="${model.input.registerUser.lastName ?? ''}"
         oninput="model.input.registerUser.lastName = this.value"
         required>
-     <br/>
-    
-    <input 
+        <br/>
+        
+        <input 
         id="email"
         placeholder="Epost"
-        value="${model.input.registerUser.email}"
+        value="${model.input.registerUser.email ?? ''}"
         oninput="model.input.registerUser.email = this.value"
         required>
         <br/>
-    
-    <input 
+        
+        <input 
         id="streetName" 
         placeholder="Gatenavn"
-        value="${model.input.registerUser.streetName}"
+        value="${model.input.registerUser.streetName ?? ''}"
         oninput="model.input.registerUser.streetName = this.value"
         required>
         <br/>
         
-    <input 
+        <input 
         id="postalCode" 
         placeholder="Postnummer"
-        value="${model.input.registerUser.postalCode}"
-        oninput="model.input.registerUser.postalCode"
-        required>
-        <br/>
-    
-    
-    <input 
-        id="city" 
-        placeholder="By"
-        value="${model.input.registerUser.city}"
-        oninput="model.input.registerUser.city = this.value"
-        required>
-        <br/>
-    
-    <input 
-        id="phoneNumber" 
-        placeholder="Telefon nummer"
-        value="${model.input.registerUser.phoneNumber}"
-        oninput="model.input.registerUser.phoneNumber = this.value"
-        required>
-        <br/>
+            value="${model.input.registerUser.postalCode ?? ''}"
+            oninput="model.input.registerUser.postalCode"
+            required>
+            <br/>
+            
+            
+            <input 
+            id="city" 
+            placeholder="By"
+            value="${model.input.registerUser.city ?? ''}"
+            oninput="model.input.registerUser.city = this.value"
+            required>
+            <br/>
+            
+            <input 
+            id="phoneNumber" 
+            placeholder="Telefon nummer"
+            value="${model.input.registerUser.phoneNumber ?? ''}"
+            oninput="model.input.registerUser.phoneNumber = this.value"
+            required>
+            <br/>
+            
+            <input 
+            type="password" 
+            id="password" 
+            placeholder="Passord"
+            value="${model.input.registerUser.password ?? ''}"
+            oninput="model.input.registerUser.password = this.value"
+            required>
+            <br/>
+            
+            
+            <input 
+            type="password" 
+            id="repeatPass" 
+            placeholder="Gjenta passord"
+            value="${model.input.registerUser.repeatPassword ?? ''}"
+            oninput="model.input.registerUser.repeatPassword = this.value"
+            required>
+            <br/>
+            
+            <div onclick="createLogInView()">Logg direkte inn</div><br/>
+            <button onclick="registerUser()">Fullfør registreringen</button>
+            </div>
+            </div>
+            `;
+        }
         
-    <input 
-        type="password" 
-        id="password" 
-        placeholder="Passord"
-        value="${model.input.registerUser.password}"
-        oninput="model.input.registerUser.password = this.value"
-        required>
-        <br/>
-    
-    
-    <input 
-        type="password" 
-        id="repeatPass" 
-        placeholder="Gjenta passord"
-        value="${model.input.registerUser.repeatPassword}"
-        oninput="model.input.registerUser.repeatPassword = this.value"
-        required>
-        <br/>
         
-    <div>Logg direkte inn</div><br/>
-    <button onclick="registerUser()">Fullfør registreringen</button>
-    `;
-}
-    
- 
-    
+        
