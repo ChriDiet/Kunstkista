@@ -1,6 +1,7 @@
 const model = {
     app: {
         currentPage: 'home',
+        previousPage: '',
         pages: {
             home: 'home',
             profile: 'profile',
