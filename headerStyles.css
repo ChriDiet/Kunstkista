@@ -4,6 +4,15 @@
    box-sizing: border-box;
 }
 
+.backButton {
+   width: 200px;
+   background-color: transparent;
+   border: none;
+   font-size: calc(0.9rem + 0.3vw);
+   margin-left: 2rem;
+   cursor: pointer;
+}
+
 #app {
    display: flex;
    flex-direction: column;
@@ -40,6 +49,7 @@ body {
 
 .homeButton {
    height: 30px;
+   cursor: pointer;
 }
 
 .menuButtons button {
@@ -195,10 +205,6 @@ h2 {
    gap: 1.5rem;
 }
 
-.userInfo.top p {
-
-}
-
 .imageContainer.productPage {
    display: flex;
    width: 80%;
@@ -233,15 +239,13 @@ h2 {
 .productInfoContainer.bottom {
    display: flex;
    justify-content: space-between;
-   width: 80%;
-   justify-self: center;
+   width: 100%;
 }
 
 .productInfo.bottom {
    display: grid;
    grid-template-columns: 1fr 1fr;
-   border: 6px solid orange;
-   width: 80%;
+   width: 90%;
 }
 
 .priceAndContact {
