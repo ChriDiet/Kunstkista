@@ -1,4 +1,3 @@
-
 function showAuctionsView() {
    let html = `
     <h2>Auksjonsoversikt</h2>
