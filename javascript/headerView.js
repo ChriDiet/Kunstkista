@@ -4,10 +4,11 @@ function createHeader() {
       <div class="logo">Kunstkista</div>
    <div class="menuButtons">
       <button onclick="setPage('home')">
-         <img class="homeButton" src="./images/home.png"/>
+      <button class="backButton" onclick="goToPreviousPage()">⬅ Gå tilbake</button>
+         <img class="homeButton" onclick="setPage('home')" src="./images/home.png"/>
       </button>
-      <button>Auksjon</button>
-      <button>Kategorier</button>
+      <button onclick="setPage('auctions')">Auksjon</button>
+      <button onclick="setPage('productPageCustomer')">Kategorier</button>
    </div>
    <div class="searchbar">
       <input type="search" id="searchbar" placeholder="Hva ser du etter?">
