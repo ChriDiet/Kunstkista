@@ -1,12 +1,12 @@
 function createHeader() {
    return /*HTML*/ `
    <div class="header">
-      <div class="logo">Kunstkista</div>
+      <div class="logo"><img src="./images/kunstkistalogo.svg"></div>
    <div class="menuButtons">
       <button onclick="setPage('home')">
-      <button class="backButton" onclick="goToPreviousPage()">⬅ Gå tilbake</button>
-         <img class="homeButton" onclick="setPage('home')" src="./images/home.png"/>
-      </button>
+      ${isHome() ? '' : '<button class="backButton header" onclick="goToPreviousPage()">⬅ Gå tilbake</button>'}
+      <button onclick="setPage('home')"> <img class="homeButton" src="./images/home.png">Hjem</button>
+      
       <button onclick="setPage('auctions')">Auksjon</button>
       <button onclick="setPage('productPageCustomer')">Kategorier</button>
    </div>
@@ -19,5 +19,13 @@ function createHeader() {
       <p>Logg inn<p>
    </div>
 </div>
+${isHome() ? '' : '<button class="backButton" onclick="goToPreviousPage()">⬅ Gå tilbake</button>'}
    `;
+}
+
+function isHome() {
+   if (model.app.currentPage == 'home') 
+      return true;
+   if (!model.app.currentPage == 'home')
+      return false;
 }

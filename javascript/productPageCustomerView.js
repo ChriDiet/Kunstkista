@@ -28,8 +28,8 @@ function showProductPageCustomerView() {
 
          <div class="productInfoContainer bottom">
             <div class="productInfo bottom">
-               <h3 class="largeFont">Historie</h3>
-               <h3 class="largeFont">Informasjon</h3>
+               <p class="largeFont grey">Historie</p>
+               <p class="largeFont underline">Informasjon</p>
                <p class="mediumFont"><b>Tilstand:</b> Godt brukt</p>
                <p class="mediumFont"><b>Mål:</b> 21 x 30 cm</p>
                <p class="mediumFont"><b>Kan hentes:</b> Ja</p>

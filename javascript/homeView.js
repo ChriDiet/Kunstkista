@@ -41,8 +41,8 @@ function createNewArtContainer() {
          <div class="artContainer-homeView">
             <img src="${imgUrl}"/>
             <div>
-               <p>${listings[i].title}</p>
-               <p>${listings[i].price},-</p>
+               <p class="mediumFont">${listings[i].title}</p>
+               <p class="smallFont">${listings[i].price},-</p>
             </div>
          </div>`
    }
