@@ -2,9 +2,16 @@ function updateView() {
    changeView()
 }
 
+
 function setPage(pagename) {
+   model.app.previousPage = model.app.currentPage;
    model.app.currentPage = pagename;
    updateView()
+}
+
+function goToPreviousPage() {
+   let previousPage = model.app.previousPage;
+   setPage(previousPage);
 }
 
 function changeView() {
@@ -42,7 +49,7 @@ function changeView() {
          break; 
       
       case page.registerUser:
-         currentView = drawRegisterUserHtml();
+         currentView = showRegisterUserView();
          break;
 
       case page.editUser:
