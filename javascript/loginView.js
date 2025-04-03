@@ -1,13 +1,5 @@
 
-function createLogInView(){
-    document.getElementById('app').innerHTML = /*HTML*/`
-    ${createHeader()}
-    ${drawLogInHtml()}
-    
-    
-    `;
-    
-}
+
 function drawLogInHtml(){
     return /*HTML*/`
     <h2>Logg inn</h2>
@@ -31,7 +23,7 @@ function drawLogInHtml(){
        
        <div>Glemt passord?</div>
        <button onclick="logIn()">Logg inn</button>
-       <div onclick="registerUserView()">registrer ny bruker</div>
+       <div onclick="setPage('registerUser')">registrer ny bruker</div>
        </div> 
     </div>
     `;

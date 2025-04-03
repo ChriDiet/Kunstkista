@@ -1,13 +1,5 @@
 
-function registerUserView(){
-    document.getElementById('app').innerHTML = /*HTML*/`
-    ${createHeader()}
-    ${drawRegisterUserHtml()}
-    
-    `;
-    
-    
-}
+
 
 
 function drawRegisterUserHtml(){
@@ -98,7 +90,7 @@ function drawRegisterUserHtml(){
             required>
             <br/>
             
-            <div onclick="createLogInView()">Logg direkte inn</div><br/>
+            <div onclick="setPage('logIn')">Logg direkte inn</div><br/>
             <button onclick="registerUser()">Fullfør registreringen</button>
             </div>
             </div>
