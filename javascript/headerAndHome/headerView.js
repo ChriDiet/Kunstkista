@@ -6,7 +6,7 @@ function createHeader() {
       <button onclick="setPage('home')"> <img class="homeButton" src="./images/home.png">Hjem</button>
       
       <button onclick="setPage('auctions')">Auksjon</button>
-      <button onclick="setPage('productCategory')">Kategorier</button>
+      <button onclick="setPage('categories')">Kategorier</button>
    </div>
    <div class="searchbar">
       <input type="search" id="searchbar" placeholder="Hva ser du etter?">
