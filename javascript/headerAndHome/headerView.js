@@ -13,7 +13,7 @@ function createHeader() {
       <button> Søk </button>
    </div>
    <div onclick="setPage('logIn')" class="logIn">
-      <img src="./images/profilePicPlaceholder.png"/>
+      <img src="./images/profilePicPlaceHolder.png"/>
       <p>Logg inn<p>
    </div>
 </div>
