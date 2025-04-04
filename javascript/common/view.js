@@ -44,6 +44,10 @@ function changeView() {
          currentView = showInAuctionView();
          break;
 
+      case page.categories:
+         currentView = showCategoriesView();
+         break;
+
       case page.myAuctions:
          currentView = showMyAuctionsView();  
          break; 

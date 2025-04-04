@@ -1,37 +1,52 @@
+
 function showAuctionsView() {
    let html = `
-    <h2>Auksjonsoversikt</h2>
-    <h3>Auksjon avsluttes: <span id="countdown">1 dag 10 timer 2 minutter</span></h3>
+   <div class="auction-page">
+   
     
-    
-    
-    
-    <p>Dato: 3. april kl 18:00</p>
-    <p>Dato: 10. april kl 19:00</p>
-    <p>Dato: 17. april kl 18:00</p>
-    <h2>Pågående auksjoner</h2>
-    `
+       <h2>Auksjon avsluttes: <span id="countdown">1 dag 10 timer 2 minutter</span></h2>
+       
+       <div class="auction-container">
+           <div class="auctions-list">
+               <h2>Pågående auksjoner</h2>
+               ${createArtContainer()}
+           </div>
+           
+           <div class="auction-overview">
+               <h2>Auksjonsoversikt</h2>
+               <p>Dato: 3. april kl 18:00</p>
+               <p>Dato: 10. april kl 19:00</p>
+               <p>Dato: 17. april kl 18:00</p>
+           </div>
+       </div>
+   </div>
+   `;
+   return html;
+}
 
+function createArtContainer() {
+   let html = '';
    let listings = model.data.listings;
-   let imgUrl = '';
+   let listingImages = model.data.listingImages;
+   let newListings = model.data.listings.length; 
 
-   for (let i = 0; i < listings.length; i++) {
-      if (model.data.listingImages[i].listingsId == listings.id) {
-         imgUrl = model.data.listingImages[i].url;
-      }
+   for (let i = 0; i < newListings; i++) {
+       let listing = listings[i];
+       let image = listingImages.find(img => img.listingId == listing.id);
+       let imgUrl = image ? image.url : 'placeholder.jpg';
 
-      html += `
-            <div class="auctions-container" id="auctions">
-              <div class="artContainer">
-                 <img src="${imgUrl}"/>
-                 <p>${listings[i].title}</p>
-                 <p>${listings[i].price},-</p>
-                 <div id="bid-button"> 
-                 <button>Bli med</button>
-                 </div>
-              </div>
-              </div>
-              `
+       html += `
+       <div class="artContainer">
+           <img src="${imgUrl}" alt="Produktbilde">
+           <div class="info">
+               <p>${listing.title}</p>
+               <p class="price">Gjeldende bud: ${listing.price}kr</p>
+           </div>
+           <button class="bid-button">Bli med</button>
+       </div>
+       `;
    }
    return html;
 }
+             
+   
