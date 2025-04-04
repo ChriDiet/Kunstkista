@@ -8,10 +8,13 @@
    width: 200px;
    background-color: transparent;
    border: none;
-   font-size: calc(0.9rem + 0.3vw);
-   margin-left: 2rem;
+   font-size: calc(0.9rem + 0.5vw);
+   margin-left: 9rem;
    cursor: pointer;
+   margin-bottom: 0px;
 }
+
+
 
 #app {
    display: flex;
@@ -38,7 +41,7 @@ body {
    flex: 1;
    display: flex;
    justify-content: space-between;
-   gap: 1rem;
+   gap: 3vw;
    align-items: center;
 }
 
@@ -50,19 +53,23 @@ body {
 .homeButton {
    height: 30px;
    cursor: pointer;
+   
 }
 
 .menuButtons button {
+   display:flex;
    border: none;
    background-color: transparent;
    font-size: calc(0.5vw + 1rem);
    cursor: pointer;
 }
 
-.logo {
+.logo img {
    cursor: pointer;
-   margin: 4vw;
-   font-size: 25px;
+   width: 10vw;
+   margin: 1vw;
+   margin-left: 7vw;
+   font-size: calc(1rem + 1vw);
    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
@@ -71,31 +78,36 @@ body {
    flex: 1;
    flex-direction: column;
    align-items: end;
-   margin-right: 4vw;
+   margin-right: 7vw;
    cursor: pointer;
 }
 
 .logIn img {
-   width: 40px;
-   height: 40px;
+   width: 60px
 }
 
 .logIn p {
    margin: 0px;
 }
 
+
+
+
+
+
 /* HOMEVIEW */
 
 .auctionHeader {
    display: flex;
    flex-direction: column;
-   background-color: rgb(146, 143, 143);
+   background-color: #dad1c2;
    align-items: center;
    font-size: calc(0.5vw + 1rem);
+   padding: 3rem;
 }
 
 .auctionHeader img {
-   width: 60%;
+   width: 80%;
    border-radius: 10px;
    box-shadow: 4px 4px 40px 0px rgba(0, 0, 0, 0.439);
 }
@@ -113,7 +125,7 @@ body {
 
 .info {
    display: flex;
-   width: 50%;
+   width: 90%;
    justify-content: space-between;
 }
 
@@ -121,21 +133,23 @@ body {
    margin-top: 0px;
    display: flex;
    align-items: center;
-   gap: 10px;
+   gap: 15px;
    justify-content: center;
-   
+   margin-bottom: 5rem;
+   width: 60%;
 }
 
 .newArtContainer {
    display: flex;
    text-align: center;
+   justify-content: center;
    padding: 2vw;
 }
 
 .newArt {
    display: grid;
-   grid-template-columns: repeat(auto-fit, 250px);
-   width: 100%;
+   grid-template-columns: repeat(auto-fit, 350px);
+   width: 80%;
    justify-content: center;
    gap: 4vw;
 }
@@ -151,7 +165,7 @@ body {
 
 h2 {
    text-align: center;
-   font-size: calc(1vw + 1rem);
+   font-size: calc(1vw + 1.5rem);
 }
 
 .artContainer-homeView {
@@ -161,6 +175,12 @@ h2 {
    box-shadow: 4px 3px 10px 0px rgba(0, 0, 0, 0.128);
    border-radius: 15px;
 }
+
+
+
+
+
+
 
 /*PRODUCTVIEW*/
 
@@ -177,21 +197,27 @@ h2 {
    font-size: calc(1vw + 1rem);
 }
 
-.link {
+.largeFont.underline {
    text-decoration: underline;
+}
+
+.largeFont.grey {
+   color: rgba(0, 0, 0, 0.247);
 }
 
 .productPageContainer {
    display: flex;
    flex-direction: column;
-   align-items: start;
    width: 80%;
+   padding-bottom: 100px;
 }
 
 .infoHeader {
    display: flex;
    justify-content: space-between;
    width: 100%;
+   align-items: baseline;
+   gap: 3rem;
 }
 
 .productInfoContainer div {
@@ -201,7 +227,7 @@ h2 {
 
 .userInfo.top {
    display: flex;
-   align-items: center;
+   align-items: flex-end;
    gap: 1.5rem;
 }
 
@@ -232,10 +258,6 @@ h2 {
    border: 15px solid rgb(0, 0, 0);
 }
 
-.bigImage.productPage {
-   
-}
-
 .productInfoContainer.bottom {
    display: flex;
    justify-content: space-between;
@@ -256,4 +278,40 @@ h2 {
 
 .category {
    align-self: center;
+}
+
+
+
+/*CATEGORIES*/
+
+
+.categoryContainer {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 8rem;
+}
+
+.link {
+   text-decoration: underline;
+   cursor: pointer;
+}
+
+.categoryGrid {
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+   width: 70%;
+   justify-items: center;
+   font-size: 30px;
+   text-align: center;
+   gap: 3rem;
+
+}
+
+.categoryCard img {
+   width: 280px;
+   height: 280px;
+   padding: 1rem;
+   border-radius: 50%;
+   object-fit: cover;
 }
