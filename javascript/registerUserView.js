@@ -91,7 +91,7 @@ function drawRegisterUserHtml(){
             <br/>
             
             <div onclick="setPage('logIn')">Logg direkte inn</div><br/>
-            <button onclick="registerUser()">Fullfør registreringen</button>
+            <button onclick="registerNewUser()">Fullfør registreringen</button>
             </div>
             </div>
             `;
