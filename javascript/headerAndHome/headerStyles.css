@@ -26,8 +26,8 @@ body {
 
 /* HEADER */
 .header {
-   display: flex;
-   justify-content: space-between;
+   display: grid;
+   grid-template-columns: 2fr 1fr 1fr 2fr;
    align-items: center;
    font-size: calc(0.5vw + 0.5rem);
 }
@@ -39,19 +39,16 @@ body {
    flex: 1;
    display: flex;
    justify-content: space-between;
-   gap: 3vw;
    align-items: center;
 }
 
 .searchbar {
-   align-items: center;
    justify-content: center;
 }
 
 .homeButton {
    height: 30px;
    cursor: pointer;
-   
 }
 
 .menuButtons button {
