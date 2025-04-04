@@ -1,15 +1,18 @@
 function registerUser(){
-    document.getElementById('userName').value;
-    document.getElementById('foreName').value;
-    document.getElementById('lastName').value;
-    document.getElementById('email').value;
-    document.getElementById('streetName').value;
-    document.getElementById('postalCode').value;
-    document.getElementById('city').value;
-    document.getElementById('phoneNumber').value;
-    document.getElementById('password').value;
-    document.getElementById('repeatPass').value;
+    const user = {};
 
+    user.id = getNextUserId();
+    user.userName = model.input.registerUser.userName;
+    user.firstName = model.input.registerUser.firstName;
+    user.lastName = model.input.registerUser.lastName;
+    user.email = model.input.registerUser.email;
+    user.streetName = model.input.registerUser.streetName;
+    user.postalCode = model.input.registerUser.postalCode;
+    user.city = model.input.registerUser.city;
+    user.phoneNumber = model.input.registerUser.phoneNumber;
+    user.password = model.input.registerUser.password;
+    user.repeatPassword = model.input.registerUser.repeatPassword;
 
-    registerUserView();
+    model.data.users.push(user);
 }  
+    
