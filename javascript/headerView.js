@@ -3,8 +3,6 @@ function createHeader() {
    <div class="header">
       <div class="logo"><img src="./images/kunstkistalogo.svg"></div>
    <div class="menuButtons">
-      <button onclick="setPage('home')">
-      ${isHome() ? '' : '<button class="backButton header" onclick="goToPreviousPage()">⬅ Gå tilbake</button>'}
       <button onclick="setPage('home')"> <img class="homeButton" src="./images/home.png">Hjem</button>
       
       <button onclick="setPage('auctions')">Auksjon</button>
