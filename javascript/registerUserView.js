@@ -90,7 +90,7 @@ function drawRegisterUserHtml(){
             required>
             <br/>
             
-            <div onclick="setPage('logIn')">Logg direkte inn</div><br/>
+            <div class="link" onclick="setPage('logIn')">Logg direkte inn</div><br/>
             <button onclick="registerNewUser()">Fullfør registreringen</button>
             </div>
             </div>

@@ -23,7 +23,7 @@ function drawLogInHtml(){
        
        <div>Glemt passord?</div>
        <button onclick="logIn()">Logg inn</button>
-       <div onclick="setPage('registerUser')">registrer ny bruker</div>
+       <div class="link" onclick="setPage('registerUser')">registrer ny bruker</div>
        </div> 
     </div>
     `;
