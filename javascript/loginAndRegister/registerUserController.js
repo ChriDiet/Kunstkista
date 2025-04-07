@@ -14,5 +14,6 @@ function registerUser(){
     user.repeatPassword = model.input.registerUser.repeatPassword;
 
     model.data.users.push(user);
+    setPage('logIn')
 }  
     
