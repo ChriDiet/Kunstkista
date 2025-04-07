@@ -269,6 +269,7 @@ const model = {
             {
                 id: 1,
                 isAdmin: false,
+                isLoggedIn: false,
                 userName: 'Leo52',
                 firstName: 'Leonardo',
                 lastName: 'da Vinci',
@@ -281,6 +282,7 @@ const model = {
             {
                 id: 2,
                 isAdmin: false,
+                isLoggedIn: false,
                 userName: 'CarlLars',
                 firstName: 'Carl',
                 lastName: 'Larsson',
@@ -293,6 +295,7 @@ const model = {
             {
                 id: 3,
                 isAdmin: false,
+                isLoggedIn: false,
                 userName: 'KariNordmann',
                 firstName: 'Kari',
                 lastName: 'Nordmann',
@@ -305,6 +308,7 @@ const model = {
             {
                 id: 4,
                 isAdmin: false,
+                isLoggedIn: false,
                 userName: 'TreKongen',
                 firstName: 'Torfinn',
                 lastName: 'Hansen',
@@ -317,6 +321,7 @@ const model = {
             {
                 id: 5,
                 isAdmin: false,
+                isLoggedIn: false,
                 userName: 'EddieTheArtist',
                 firstName: 'Edvard',
                 lastName: 'Munch',
@@ -329,6 +334,7 @@ const model = {
             {
                 id: 6,
                 isAdmin: false,
+                isLoggedIn: false,
                 userName: 'Marie91',
                 firstName: 'Marie',
                 lastName: 'Almasen',
