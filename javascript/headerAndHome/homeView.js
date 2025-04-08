@@ -1,27 +1,26 @@
 function showHomeView() {
    return /*HTML*/ `
-   <div class="auctionHeader">
-      <p class="auctionCounting">Auksjon avsluttes om: 1 dag 10 timer 2 minutter</p>
-      <p class="auctionSubtitle">Produkter til auksjon denne uken:</p>
-      <div class="auctionImgContainer">
-      <div>
-      <button> &#10094; </button>
-      <img src="./images/mariusgenser.jpg"/>
-      <button> &#10095; </button>
-   </div>
-  <!-- <div class="info">
-      <p>Produktnavn</p>
-      <p>Startpris: 200kr</p>
-   </div> -->
-         
+   <div class="homepage">
+      <div class="auctionHeader">
+         <p class="auctionCounting">Auksjon avsluttes om: 1 dag 10 timer 2 minutter</p>
+         <p class="auctionSubtitle">Produkter til auksjon denne uken:</p>
+         <div class="auctionImgContainer">
+            <div>
+               <button> &#10094; </button>
+               <img src="./images/mariusgenser.jpg"/>
+               <button> &#10095; </button>
+            </div>
+         </div>
       </div>
-   </div>
-   <h2>Nye kunstverk</h2>
-   <div class="newArtContainer">
-      <div class="newArt">
-         ${createNewArtContainer()}
+
+      <div class="newSales">
+         <h2>Nye kunstverk</h2>
+         <div class="newArtContainer">
+            <div class="newArt">
+               ${createNewArtContainer()}
+            </div>
+         </div>
       </div>
-   </div>
 
    `;
 }
