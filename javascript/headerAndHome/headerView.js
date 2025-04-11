@@ -1,5 +1,15 @@
 function createHeader() {
-   let loggInText = 'Logg inn';
+   let loggInHtml = 'Logg inn';
+   const user = model.data.users.find(users => users.id == model.app.isLoggedIn);
+
+   if(user){
+      loggInHtml = `${user.firstName}`;
+
+   } else{
+      loggInHtml = 'Logg inn'
+
+   }
+   
    return /*HTML*/ `
    <div class="header">
       <div class="logo"><img src="./images/kunstkistalogo.svg"></div>
@@ -15,7 +25,7 @@ function createHeader() {
    </div>
    <div onclick="setPage('logIn')" class="logIn">
       <img src="./images/profilePicPlaceHolder.png"/>
-      <p>${loggInText}<p>
+      <p>${loggInHtml}<p>
    </div>
 </div>
 ${isHome() ? '' : '<button class="backButton" onclick="goToPreviousPage()">⬅ Gå tilbake</button>'}
@@ -28,3 +38,10 @@ function isHome() {
    if (!model.app.currentPage == 'home')
       return false;
 }
+  
+  
+  
+  
+  
+  
+  
