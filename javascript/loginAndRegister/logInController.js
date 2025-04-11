@@ -1,15 +1,13 @@
 function logIn(){
-   
-    for(let users of model.data.users){
-        if(model.input.logIn.userName === users.userName && model.input.logIn.password === users.password){
-            users.isLoggedIn = true;
-            alert('Velkommen')
-            setPage('home')
+   const user = model.data.users.find(x => 
+    x.userName === model.input.logIn.userName
+    && x.password === model.input.logIn.password);
 
-        } else{
-            alert('Brukernavn eller passord er feil')
-        }
+    if(user){
+        model.app.isLoggedIn = user.id;
+        setPage('home');
     }
-   
+    
+   updateView();
 
 }

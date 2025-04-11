@@ -1,4 +1,5 @@
 function createHeader() {
+   let loggInText = 'Logg inn';
    return /*HTML*/ `
    <div class="header">
       <div class="logo"><img src="./images/kunstkistalogo.svg"></div>
@@ -14,7 +15,7 @@ function createHeader() {
    </div>
    <div onclick="setPage('logIn')" class="logIn">
       <img src="./images/profilePicPlaceHolder.png"/>
-      <p>Logg inn<p>
+      <p>${loggInText}<p>
    </div>
 </div>
 ${isHome() ? '' : '<button class="backButton" onclick="goToPreviousPage()">⬅ Gå tilbake</button>'}
