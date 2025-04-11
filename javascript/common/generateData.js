@@ -6,13 +6,12 @@ function createRandomUsers() {
       let newUser = createNewUser(firstname);
       model.data.users.push(newUser)
    }
-   return model.data.users;
 }
 
 
 
 function createNewUserContactInfo() {
-   let cities = ['Bergen', 'Oslo', 'Trondheim', 'Molde', 'Skien', 'Tønsberg', 'Larvik', 'Tromsø', 'Hønefoss', 'Sarpsborg', 'Fredrikstad', 'Verdal', 'Stjørdal', 'Drammen', 'Harstad', 'Kirkenes'];
+   let cities = ['Bergen', 'Oslo', 'Trondheim', 'Molde', 'Skien', 'Tønsberg', 'Larvik', 'Tromsø', 'Hønefoss', 'Sarpsborg', 'Fredrikstad', 'Verdal', 'Stjørdal', 'Drammen', 'Harstad', 'Kirkenes']
    for (let user of model.data.users.slice(6)) {
       let id = getNextContactInfoId();
       let userId = user.id;
@@ -34,8 +33,9 @@ function createNewUserContactInfo() {
    }
 }
 
-function createNewUser(name) {
 
+
+function createNewUser(name) {
    return {
       id: getNextUserId(),
       isAdmin: false,
@@ -98,7 +98,6 @@ function createNewListings() {
          dateListed: createRandomDate(),
       })
    }
-   console.log(model.data.listings)
 }
 
 function createRandomDate() {
