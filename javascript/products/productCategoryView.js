@@ -40,7 +40,7 @@ function createSalesListings() {
    let html = '';
 
    for (let listing of model.data.listings) {
-      const url = model.data.listingImages.find(x => x.listingId === listing.id)?.url ?? 'placeholder.png'; 
+      const url = model.data.listingImages.find(x => x.listingId === listing.id)?.url ?? './images/placeholder.png'; 
       const location = model.data.userContactInfos.find(x => x.userId === listing.userId).city;
 
       html += `
