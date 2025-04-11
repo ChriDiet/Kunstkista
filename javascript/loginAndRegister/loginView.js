@@ -21,7 +21,7 @@ function drawLogInHtml(){
        oninput="model.input.logIn.password = this.value">
        <br/>
        
-       <div>Glemt passord?</div>
+       <div onclick="setPage()">Glemt passord?</div>
        <button onclick="logIn()">Logg inn</button>
        <div class="link" onclick="setPage('registerUser')">registrer ny bruker</div>
        </div> 

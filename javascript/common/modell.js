@@ -11,6 +11,7 @@ const model = {
             inAuction: 'inAuction',
             myAuctions: 'myauctions',
             registerUser: 'registerUser',
+            changeUserNameOrPass: 'changeUserNameOrPass',
             editUser: 'editUser',
             newSale: 'newSale',
             productPageCustomer: 'productPageCustomer',

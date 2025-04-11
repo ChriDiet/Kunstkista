@@ -87,6 +87,10 @@ function changeView() {
       case page.adminProductPageApproval:
          currentView = showAdminProductPageApprovalView();
          break;
+
+      case page.changeUserNameOrPass:
+         currentView = drawChangePasswordAndUserNameHtml();
+         break;
    }
       document.getElementById('app').innerHTML = /*HTML*/`
       ${createHeader()}

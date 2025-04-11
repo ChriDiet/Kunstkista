@@ -7,7 +7,6 @@ function logIn(){
         model.app.isLoggedIn = user.id;
         setPage('home');
     }
+    updateView();
     
-   updateView();
-
 }
