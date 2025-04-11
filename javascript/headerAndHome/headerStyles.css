@@ -72,17 +72,21 @@ body {
    display: flex;
    flex: 1;
    flex-direction: column;
-   align-items: end;
+   justify-self: end;
    margin-right: 7vw;
    cursor: pointer;
 }
 
 .logIn img {
-   width: 60px
+   margin-top: 2rem;
+   width: 80px;
+   align-self: center;
 }
 
 .logIn p {
-   margin: 0px;
+   margin-top: 0.2rem;
+   align-self: center;
+   font-size: calc(0.5vw + 0.8rem);
 }
 
 
