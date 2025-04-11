@@ -1,14 +1,34 @@
 function showProductCategoryView() {
    return /*HTML*/ `
    <div class="productCategoryPage">
-         <div class="productCategory heading">
-            Strikketøy 
-         </div>
+      <div class="productCategory heading">
+         Strikketøy 
+      </div>
       <div class="productCategoryContainer">
-         <div class="containerHeader"> </div>
-         <div class="categoriesList"></div>
-         <div class="productRow 1">${createSalesListings()}</div>
-         <div class="productRow 2"></div>
+         <div class="categoriesList mediumFont">
+         <p>Kategorier<p>
+         <ul>
+            <li>Malerier</li>
+            <li>Fotografier</li>
+            <li>Strikketøy</li>
+            <li>Figurer</li>
+            <li>Noveller/Skriv</li>
+            <li>Dreide boller</li>
+            <li>Treverk</li>
+            <li>Rosemaling</li>  
+         </ul>
+      </div>
+         <div class="listingsImageRow">
+            <button class="filtering smallFont">⏚ Filtrer</button>
+            <p></p>
+            <div class="sorting">
+               <select class="smallFont" id="sorting" name="sorting">
+                  <option>Pris lavest til høyest</option>
+                  <option>Pris høyest til lavest</option>
+               </select>
+            </div>
+            ${createSalesListings()}
+         </div>
       </div>
    </div>
    `;
@@ -18,32 +38,22 @@ function showProductCategoryView() {
 
 function createSalesListings() {
    let html = '';
-   let listings = model.data.listings;
-   let imgUrl = '';
-   let newListings = 8;
-   let city = '';
 
-   for (let i = 0; i < newListings; i ++) {
-      if (model.data.listingImages[i].listingsId == listings.id) {
-         imgUrl = model.data.listingImages[i].url;
-      }
-
-   for (let i = 0; i < 8; i ++) {
-      if (model.data.userContactInfos.userId == model.data.listings[i].userId) {
-         city = model.data.userContactInfos[i].city;
-      }
+   for (let listing of model.data.listings) {
+      const url = model.data.listingImages.find(x => x.listingId === listing.id)?.url ?? 'placeholder.png'; 
+      const location = model.data.userContactInfos.find(x => x.userId === listing.userId).city;
 
       html += `
-         <div onclick="setPage('productPageCustomer')"class="artContainer-homeView">
-            <img src="${imgUrl}"/>
-            <div>
-               <p class="mediumFont">${listings[i].title}</p>
-               <p class="smallFont">${listings[i].price},-</p>
-               <p class="smallFont">${city}</p>
+         <div onclick="setPage('productPageCustomer')"class="categoryPictures">
+            <img src="${url}"/>
+            <div class="listingInfos">
+               <p class="mediumFont">${listing.title}</p>
+               <p class="smallFont">${listing.price},-</p>
+               <p class="smallFont">📍 ${location}</p>
             </div>
-         </div>`
-   }
+         </div>`;
+      }
+   return html
    }
 
-   return html
-}
+
