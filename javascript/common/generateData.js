@@ -26,20 +26,22 @@ function createNewUser(name) {
       rating: 5
    }
 }
-// for(let listing of model.data.listings) {
-//    const url = model.data.listingImages.find(x => x.listingId === listing.id)?.url ?? 'placeholder.png';
-//    const location = model.data.userContactInfos.find(x => x.userId === listing.userId).city;
 
    function createNewUserContactInfo() {
+      let cities = ['Bergen','Oslo','Trondheim','Molde','Skien','Tønsberg','Larvik','Tromsø','Hønefoss','Sarpsborg','Fredrikstad','Verdal','Stjørdal','Drammen','Harstad','Kirkenes']
+      
 
       for (let user of model.data.users) {
          let userId = user.id;
          let userName = user.firstName;
          let phoneNumber = createPhoneNumber()
-         let email = user.username + '@testbruker.no';
+         let email = user.userName + '@testbruker.no';
+         let street = 'Kunstsvingen ' + Math.floor(1 + Math.random() * 60)
+         let postalCodeId = Math.floor(Math.random() * 4) + 1;
+         let city = cities[Math.floor(Math.random() * cities.length)];
+         console.log(userId,userName,phoneNumber,email,street,postalCodeId,city)
+         }
       }
-
-   }
 
    function createAddress() {
 
