@@ -109,7 +109,7 @@ body {
 }
 
 .auctionHeader img {
-   width: 80%;
+   width: 70%;
    border-radius: 10px;
    box-shadow: 4px 4px 40px 0px rgba(0, 0, 0, 0.439);
 }
@@ -131,7 +131,7 @@ body {
    gap: 15px;
    justify-content: center;
    margin-bottom: 5rem;
-   width: 60%;
+   width: 50%;
 }
 
 .newArtContainer {
@@ -143,20 +143,20 @@ body {
 
 .newArt {
    display: grid;
-   grid-template-columns:1fr 1fr 1fr 1fr;
+   grid-template-columns:1fr 1fr 1fr;
    justify-content: center;
    gap: 2rem;
    padding: 2rem;
 }
 
 .newArtContainer img {
-   width: 40%;
+   width: 80%;
    align-self: center;
    margin-top: 1rem;
    flex: 1;
    object-fit: cover;
    border-radius: 1rem;
-   border: px solid black;
+   border: 1px solid black;
 }
 
 h2 {

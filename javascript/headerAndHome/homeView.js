@@ -6,9 +6,9 @@ function showHomeView() {
          <p class="auctionSubtitle">Produkter til auksjon denne uken:</p>
          <div class="auctionImgContainer">
             <div>
-               <button> &#10094; </button>
+               <button> ❮ </button>
                <img src="./images/mariusgenser.jpg"/>
-               <button> &#10095; </button>
+               <button> ❯ </button>
             </div>
          </div>
       </div>
@@ -29,7 +29,7 @@ function createNewArtContainer() {
    let html = '';
    let listings = model.data.listings;
    let imgUrl = '';
-   let newListings = 8;
+   let newListings = 6;
 
    for (let i = 0; i < newListings; i ++) {
       if (model.data.listingImages[i].listingsId == listings.id) {

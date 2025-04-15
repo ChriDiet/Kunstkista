@@ -106,17 +106,6 @@ function createRandomDate() {
    return date;
 }
 
-function createRandomCategory() {
-   let categories = [];
-   let randomCategory = '';
-
-   for (let categori of model.data.categories) {
-      categories.push(categori.name)
-   }
-   randomCategory = categories[Math.floor(Math.random() * categories.length)];
-   return randomCategory;
-}
-
 createRandomUsers();
 createNewUserContactInfo();
 createNewListings();
