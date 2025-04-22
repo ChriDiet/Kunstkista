@@ -7,17 +7,17 @@ function drawChangePasswordAndUserNameHtml(){
             <input 
                 oninput="model.input.editUser.newUserName = this.value" 
                 placeholder="Nytt brukernavn"
-                value="${model.input.editUser.newUserName}"
+                value="${model.input.editUser.newUserName ?? ''}"
                 ><br/>
             <input 
                 oninput="model.input.editUser.newPassword = this.value" 
                 placeholder="Nytt passord"
-                value="${model.input.editUser.newPassword}"    
+                value="${model.input.editUser.newPassword ?? ''}"    
                 ><br/>
             <input 
                 oninput="model.input.editUser.repeatNewPassword = this.value" 
                 placeholder="Repeter nytt passord"
-                value="${model.input.editUser.repeatNewPassword}"
+                value="${model.input.editUser.repeatNewPassword ?? ''}"
             ><br/>
             <button onclick="changeUserNameAndPassword()">Bekreft</button>
         </div>
