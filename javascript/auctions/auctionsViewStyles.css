@@ -66,3 +66,85 @@
 .bid-button:hover {
     background-color: #ddd;
 };
+.auction-detail {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 20px;
+    background: #f8f8f8;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .auction-detail h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+  }
+  
+  .art-detail {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  
+  .art-detail img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+  }
+  
+  .description {
+    flex: 1;
+  }
+  
+  .description p {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .bid-section {
+    margin: 30px 0;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .bid-section input[type="number"] {
+    padding: 10px;
+    font-size: 16px;
+    width: 150px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .bid-section button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    
+  }
+  
+  .bid-section button:hover {
+    background-color: #005fa3;
+  }
+  
+  .bid-history {
+    margin-top: 20px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  .bid-history p {
+    margin: 5px 0;
+    font-size: 16px;
+  }
