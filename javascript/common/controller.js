@@ -10,10 +10,9 @@ function setAuctionProductPage(listingId) {
 
 }
 
-function setCategoryProductPage(listingId) {
-   model.app.selectedListingId = listingId;
-   setPage('categories')
-
+function setProductCategoryPage(categoryId) {
+   model.app.selectedListingId = categoryId;
+   setPage('productCategory')
 }
 
 function setPage(pagename) {
