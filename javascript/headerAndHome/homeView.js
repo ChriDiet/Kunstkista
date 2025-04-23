@@ -1,3 +1,7 @@
+let sliderUrl = '';
+let slideIndex = 0;
+
+
 function showHomeView() {
    return /*HTML*/ `
    <div class="homepage">
@@ -6,9 +10,9 @@ function showHomeView() {
          <p class="auctionSubtitle">Produkter til auksjon denne uken:</p>
          <div class="auctionImgContainer">
             <div>
-               <button> ❮ </button>
-               <img src="./images/mariusgenser.jpg"/>
-               <button> ❯ </button>
+               <button onclick="changeSliderImage('increase')"> &#10094; </button>
+               <img src="${sliderUrl ? sliderUrl : model.data.listingImages.find(x => x.listingId === model.data.auctions[0].listingId).url}"/>
+               <button onclick="changeSliderImage('decrease')"> &#10095; </button>
             </div>
          </div>
       </div>
@@ -27,55 +31,54 @@ function showHomeView() {
 
 function createNewArtContainer() {
    let html = '';
-   let listings = model.data.listings;
    let imgUrl = '';
-   let newListings = 6;
+   let listings = model.data.listings;
+   let listingsQty = 0;
+      let maxListings = 8;
 
-   for (let i = 0; i < newListings; i ++) {
-      if (model.data.listingImages[i].listingsId == listings.id) {
-         imgUrl = model.data.listingImages[i].url;
-      }
-
+   for (let listing of listings) {
+      if (listingsQty == maxListings) return html;
+      
+      listingsQty++
+      imgUrl = model.data.listingImages.find(x => x.listingId === listing.id)?.url ?? './images/placeholder.png'; 
+      
       html += `
-         <div onclick="setPage('productPageCustomer')"class="artContainer-homeView">
-            <img src="${imgUrl}"/>
-            <div>
-               <p class="mediumFont">${listings[i].title}</p>
-               <p class="smallFont">${listings[i].price},-</p>
-            </div>
-         </div>`
+      <div onclick="setProductPage(${listing.id})"class="artContainer-homeView">
+         <img src="${imgUrl}"/>
+         <div>
+            <p class="mediumFont">${listing.title}</p>
+            <p class="smallFont">${listing.price},-</p>
+         </div>
+      </div>`
    }
    return html;
 }
-// //Ikke ferdig//
-// function createAuctionSliderHtml() {
-//    let html = '';
-//    let auctions = model.data.auctions
-//    let listingImages = model.data.listingImages;
-//    let listings = model.data.listings;
-//    let imgUrl = '';
-//    let slidesQty = auctions.length;
-//    let title = '';
-//    let price = '';
-//    let sliderImages = [];
-   
+   function changeSliderImage(action) {
+      let urls = model.data.listingImages.map(url => listingImage.url);
+      let minIndex = 0;
+      let maxIndex = urls.length - 1;
 
-//    for (let i = 0; i < slidesQty; i ++) {
-//       if (listingImages[i].listingsId == auctions.listingId) {
-//          imgUrl = listingImages[i].url;
-//          title = listings[i].title;
-//          price = listings[i].price; 
-//          sliderImages.push({imgUrl, title,price})
-//       }
-//    }
-//    console.log(sliderImages);
-// }
+   if (action == 'increase' && slideIndex < maxIndex) {
+      slideIndex ++;
+      sliderUrl = urls[slideIndex];
+   }
+   if (action == 'decrease' && slideIndex > minIndex) {
+      slideIndex --;
+      sliderUrl = urls[slideIndex];
+   } else if (action == 'increase' && slideIndex == maxIndex) {
+      slideIndex = minIndex;
+      sliderUrl = urls[slideIndex];
+   } else if (action == 'decrease' && slideIndex == minIndex) {
+      slideIndex = maxIndex;
+      sliderUrl = urls[slideIndex];
+   }
+   updateView()
+   }
 
-// function getImageUrl() {
-
-// }
-
-// function createAuctionSlider() {
-
-   
-// }
+function createImageUrlArray() { 
+   let urls = [];
+   for (let auction of model.data.auctions) {
+      urls.push(model.data.listingImages.find(x => x.listingId === auction.listingId)?.url ?? './images/placeholder.png');
+   }
+   return urls;
+}
