@@ -1,21 +1,15 @@
 function showProductCategoryView() {
+   let categoryName = model.data.categories.find(category => category.id == model.app.selectedCategory).name
    return /*HTML*/ `
    <div class="categoriesPage">
       <div class="categories heading">
-         Strikketøy 
+         ${categoryName} 
       </div>
       <div class="categoriesContainer">
          <div class="categoriesList mediumFont">
          <p>Kategorier<p>
          <ul>
-            <li>Malerier</li>
-            <li>Fotografier</li>
-            <li>Strikketøy</li>
-            <li>Figurer</li>
-            <li>Noveller/Skriv</li>
-            <li>Dreide boller</li>
-            <li>Treverk</li>
-            <li>Rosemaling</li>  
+            ${createCategoriesList()}
          </ul>
       </div>
          <div class="listingsImageRow">
@@ -35,25 +29,36 @@ function showProductCategoryView() {
 
 }
 
+function createCategoriesList() {
+   let html = '';
+   for (let category of model.data.categories) {
+      html+= `<li class="categoryList link" onclick="setProductCategoryPage(${category.id})">${category.name}</li>`;
+   }
+   return html;
+}  
+
 
 function createSalesListings() {
    let html = '';
+   let maxListings = 0;
 
    for (let listing of model.data.listings) {
+
+      if(listing.categoryId == model.app.selectedCategory && maxListings != 12) {
       const url = model.data.listingImages.find(listingImage => listingImage.listingId === listing.id)?.url ?? './images/placeholder.png'; 
       const location = model.data.userContactInfos.find(user => user.userId === listing.userId).city;
+      maxListings++
 
       html += `
-         <div onclick="setPage('productPage')"class="categoryPictures">
+         <div onclick="setProductPage(${listing.id})"class="categoryPictures">
             <img src="${url}"/>
             <div class="listingInfos">
-               <p class="mediumFont">${listing.title}</p>
+               <p class="mediumFont categoryList">${listing.title}</p>
                <p class="smallFont">${listing.price},-</p>
                <p class="smallFont">📍 ${location}</p>
             </div>
          </div>`;
       }
-   return html
    }
-
-
+   return html;
+}

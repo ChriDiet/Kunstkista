@@ -2,50 +2,31 @@ function showNewSaleView() {
 return /*HTML*/ `
 <div class="newSalePage">
    <div class="newSaleHeader"> 
-      Ny annonse
+      Legg til nytt kunstverk
    </div>
    <div class="newSaleContainer">
 
       <div class="newImagesContainer">
-         <img class="imageBig" src="./images/placeholder.png">
+         <img class="imageBig" src="./images/rosemaling.jpg">
          <div class="imagesSmall">
-            <img src="./images/placeholder.png">
+            <img src="./images/rosemaling.jpg">
             <img src="./images/placeholder.png">
             <img src="./images/placeholder.png">
          </div>
          <button class="addPictures">+ Legg til bilder</button>
       </div>
-      
       <div class ="newSaleForm">
          <form>
-            <label for="salesform">Velg salgsform</label>
-            <select id="salesform" name="salesform">
-               <option>Vanlig salg</option>
-               <option>Auksjon</option>
-            </select>
+            ${createSelectSalesFormHtml()}
+            ${createSelectCategoriesHtml()}
 
-            <label for="categories">Kategori</label>
-            <select id="categories" name="categories">
-               <option>Malerier</option>
-               <option>Fotografier</option>
-               <option>Strikketøy</option>
-               <option>Figurer</option>
-               <option>Noveller/Skriv</option>
-               <option>Dreide boller</option>
-               <option>Treverk</option>
-               <option>Rosemaling</option>
-            </select>
             <label for="productName"> Navn på kunstverk</label>
             <input type="text" id="productName" name="productName">
             <label for="price">Pris</label>
             <input type="number" id="productPrice" name="productPrice">
-            <label for="condition">Tilstand</label>
-            <select id="condition" name="condition">
-               <option>Som ny</option>
-               <option>Pent brukt</option>
-               <option>Godt brukt</option>
-               <option>Slitt</option>
-            </select>
+            
+            ${createSelectConditionHtml()}
+            
             <label for="measurements">Mål i cm</label>
             <input type="text" id="measurements" name="measurements" placeholder="Eksempel: 21 x 30 x 20">
          </form>
@@ -68,4 +49,39 @@ return /*HTML*/ `
    </div>
 </div>
 `;
+}
+
+function createSelectCategoriesHtml() {
+   let html = '';
+   for (let category of model.data.categories) {
+      html+= `<option> ${category.name}</option>`;
+   }
+   return `<label for="categories">Kategori</label>
+   <select id="categories" name="categories">
+      ${html}
+   </select>`
+}  
+
+function createSelectSalesFormHtml() {
+   let html = '';
+   for (let option of model.data.salesForm) {
+      html+= `<option> ${option.type}</option>`;
+   }
+   return `
+      <label for="salesform">Velg salgsform</label>
+      <select id="salesform" name="salesform">
+         ${html}
+      </select>`
+}
+
+function createSelectConditionHtml() {
+   let html = '';
+   for (let condition of model.data.productCondition) {
+      html+= `<option> ${condition.condition}</option>`;
+   }
+   return `
+   <label for="condition">Tilstand</label>
+            <select id="condition" name="condition">
+               ${html}
+            </select>`
 }
