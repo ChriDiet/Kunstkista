@@ -104,10 +104,10 @@ const model = {
     data: {
 
         productCondition: [
-            { id: 1, condition: 'mint' },
-            { id: 2, condition: 'well used' },
-            { id: 3, condition: 'gently used' },
-            { id: 4, condition: 'poor' },
+            { id: 1, condition: 'Som ny' },
+            { id: 2, condition: 'Godt brukt' },
+            { id: 3, condition: 'Pent brukt' },
+            { id: 4, condition: 'Dårlig' },
         ],
     
 
