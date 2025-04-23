@@ -16,8 +16,8 @@ const model = {
             changePassword: 'changePassword',
             editUser: 'editUser',
             newSale: 'newSale',
-            productPageCustomer: 'productPageCustomer',
-            productCategory: 'productCategory',
+            productPage: 'productPage',
+            categories: 'categories',
             adminApprovalPage: 'adminApprovalPage', 
             userContactInfo: 'contactInfo' ,
             adminAuctionPageApproval: 'adminAuctionPageApproval',
@@ -85,7 +85,7 @@ const model = {
             editDisplayName: null
         },
 
-        productCategory: {
+        categories: {
             pageIndex: "1",
             sort: null,
             minPrice: null,

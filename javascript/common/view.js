@@ -2,13 +2,6 @@ function updateView() {
    changeView()
 }
 
-
-function setPage(pagename) {
-   model.app.previousPage = model.app.currentPage;
-   model.app.currentPage = pagename;
-   updateView()
-}
-
 function goToPreviousPage() {
    let previousPage = model.app.previousPage;
    setPage(previousPage);
@@ -25,9 +18,9 @@ function changeView() {
          break;
 
       case page.profile:
-         currentView = showProfileView();  
-         break; 
-      
+         currentView = showProfileView();
+         break;
+
       case page.editProfile:
          currentView = showEditProfileView();
          break;
@@ -39,7 +32,7 @@ function changeView() {
       case page.login:
          currentView = drawLogInHtml();
          break;
-      
+
       case page.inAuction:
          currentView = showInAuctionView();
          break;
@@ -49,9 +42,9 @@ function changeView() {
          break;
 
       case page.myAuctions:
-         currentView = showMyAuctionsView();  
-         break; 
-      
+         currentView = showMyAuctionsView();
+         break;
+
       case page.registerUser:
          currentView = drawRegisterUserHtml();
          break;
@@ -64,22 +57,22 @@ function changeView() {
          currentView = drawNewSaleHtml();
          break;
 
-      case page.productPageCustomer:
-         currentView = showProductPageCustomerView();
+      case page.productPage:
+         currentView = showProductPageView();
          break;
 
-      case page.productCategory:
-         currentView = showProductCategoryView();
+      case page.categories:
+         currentView = showCategoriesView();
          break;
-      
+
       case page.adminApprovalPage:
          currentView = showAdminApprovalPageView();
          break;
 
       case page.userContactInfo:
-         currentView = showUserContactInfoView();  
-         break; 
-      
+         currentView = showUserContactInfoView();
+         break;
+
       case page.adminAuctionPageApproval:
          currentView = showAdminAuctionPageApprovalView();
          break;
@@ -92,7 +85,7 @@ function changeView() {
          currentView = drawChangePasswordHtml();
          break;
    }
-      document.getElementById('app').innerHTML = /*HTML*/`
+   document.getElementById('app').innerHTML = /*HTML*/`
       ${createHeader()}
       ${currentView ? currentView : showHomeView()}`;
 }

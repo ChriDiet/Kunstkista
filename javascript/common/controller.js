@@ -1,6 +1,6 @@
 function setProductPage(listingId) {
    model.app.selectedListingId = listingId;
-   setPage('productPageCustomer')
+   setPage('productPage')
 
 }
 
@@ -12,7 +12,7 @@ function setAuctionProductPage(listingId) {
 
 function setCategoryProductPage(listingId) {
    model.app.selectedListingId = listingId;
-   setPage('productCategory')
+   setPage('categories')
 
 }
 

@@ -1,10 +1,10 @@
 function showProductCategoryView() {
    return /*HTML*/ `
-   <div class="productCategoryPage">
-      <div class="productCategory heading">
+   <div class="categoriesPage">
+      <div class="categories heading">
          Strikketøy 
       </div>
-      <div class="productCategoryContainer">
+      <div class="categoriesContainer">
          <div class="categoriesList mediumFont">
          <p>Kategorier<p>
          <ul>
@@ -44,7 +44,7 @@ function createSalesListings() {
       const location = model.data.userContactInfos.find(user => user.userId === listing.userId).city;
 
       html += `
-         <div onclick="setPage('productPageCustomer')"class="categoryPictures">
+         <div onclick="setPage('productPage')"class="categoryPictures">
             <img src="${url}"/>
             <div class="listingInfos">
                <p class="mediumFont">${listing.title}</p>

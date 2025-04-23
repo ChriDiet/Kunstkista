@@ -1,4 +1,4 @@
-function showProductPageCustomerView() {
+function showProductPageView() {
 
    return /*HTML*/ `
       <div class="productPageContainer">

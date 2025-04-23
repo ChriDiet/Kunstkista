@@ -40,7 +40,7 @@ function createNewArtContainer() {
       if (listingsQty == maxListings) return html;
       
       listingsQty++
-      imgUrl = model.data.listingImages.find(x => x.listingId === listing.id)?.url ?? './images/placeholder.png'; 
+      imgUrl = model.data.listingImages.find(listingImage => listingImage.listingId === listing.id)?.url ?? './images/placeholder.png'; 
       
       html += `
       <div onclick="setProductPage(${listing.id})"class="artContainer-homeView">
@@ -54,7 +54,7 @@ function createNewArtContainer() {
    return html;
 }
    function changeSliderImage(action) {
-      let urls = model.data.listingImages.map(url => listingImage.url);
+      let urls = model.data.listingImages.map(listingUrl => listingUrl.url)
       let minIndex = 0;
       let maxIndex = urls.length - 1;
 
@@ -74,11 +74,3 @@ function createNewArtContainer() {
    }
    updateView()
    }
-
-function createImageUrlArray() { 
-   let urls = [];
-   for (let auction of model.data.auctions) {
-      urls.push(model.data.listingImages.find(x => x.listingId === auction.listingId)?.url ?? './images/placeholder.png');
-   }
-   return urls;
-}
