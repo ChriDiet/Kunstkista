@@ -16,12 +16,41 @@
    font-size: calc(1vw + 1rem);
 }
 
+button {
+   cursor: pointer;
+}
+
+img {
+   cursor: pointer;
+}
+
 
 
 
 
 /*PRODUCTVIEW*/
 
+/*ADMIN*/
+
+.approvalButton {
+   background-color: rgb(152, 176, 152);
+   width: 200px;
+   height: 80px;
+   padding: 1rem;
+   margin-right: 4rem;
+}
+
+.disapprovalButton {
+   background-color: rgb(217, 144, 144);
+   width: 200px;
+   height: 80px;
+}
+
+.adminButtons {
+   margin-top: 4rem;
+   align-self: center;
+
+}  
 .productPageContainer {
    display: grid;
    width: 50%;
