@@ -5,9 +5,9 @@ function drawChangePasswordHtml(){
         <div>
             <img class="loginImage" src="images/profilePicPlaceHolder.png">
             <input 
-                oninput="model.input.editUser.newUserName = this.value" 
+                oninput="model.input.logIn.username = this.value" 
                 placeholder="Brukernavn"
-                value="${model.input.editUser.newUserName ?? ''}"
+                value="${model.input.logIn.userName ?? ''}"
                 ><br/>
             <input 
                 type="password"
