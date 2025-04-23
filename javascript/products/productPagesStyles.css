@@ -125,16 +125,22 @@
    justify-items: center;
    font-size: 2rem;
    text-align: center;
-   gap: 2rem;
+   gap: 2.2rem;
 
 }
 
 .categoryCard img {
-   width: 200px;
-   height: 200px;
+   width: 250px;
+   height: 250px;
    padding: 1rem;
-   border-radius: 50%;
-   object-fit: cover;
+   border-radius: 20%;
+   border: 0.4rem solid rgb(55, 39, 20);
+   object-fit: contain;
+}
+
+.categoryName{
+   margin-bottom: 1.5rem;
+   
 }
 
 

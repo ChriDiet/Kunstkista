@@ -22,7 +22,7 @@ const model = {
             userContactInfo: 'contactInfo' ,
             adminAuctionPageApproval: 'adminAuctionPageApproval',
             adminProductPageApproval: 'adminProductPageApproval',
-            categories: 'categories'
+            productCategory: 'productCategory'
         },
         isLoggedIn: false,
         isAuctionLive: false,

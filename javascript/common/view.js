@@ -65,6 +65,10 @@ function changeView() {
          currentView = showCategoriesView();
          break;
 
+      case page.productCategory:
+         currentView = showCategoriesView();
+         break;
+
       case page.adminApprovalPage:
          currentView = showAdminApprovalPageView();
          break;
