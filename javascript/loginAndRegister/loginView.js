@@ -1,5 +1,3 @@
-
-
 function drawLogInHtml(){
     return /*HTML*/`
     <h2>Logg inn</h2>
