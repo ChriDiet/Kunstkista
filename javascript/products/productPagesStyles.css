@@ -289,8 +289,14 @@ form {
 .categoryPictures img {
    height: 70%;
    width: 250px;
-   object-fit: cover;
+   object-fit: contain;
    flex: 1;
+   border-radius: 10px;
+}
+
+.categoryPictures img:hover {
+   scale: 102%;
+   box-shadow: 2px 2px 20px 0px rgba(0, 0, 0, 0.439);
 }
 .categoryPictures {
    display: grid;
@@ -298,7 +304,15 @@ form {
    justify-self: start;
    gap: 1vw;
 }
+.categoryList {
+   font-size: calc(0.7vw + 0.7rem);
+   text-decoration: none;
+}
 
+.categoryList:hover {
+   text-decoration: underline;
+   font-weight: 400;
+}
 .sorting {
    justify-self: center
 }

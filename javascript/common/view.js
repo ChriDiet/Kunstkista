@@ -66,7 +66,7 @@ function changeView() {
          break;
 
       case page.productCategory:
-         currentView = showCategoriesView();
+         currentView = showProductCategoryView();
          break;
 
       case page.adminApprovalPage:
