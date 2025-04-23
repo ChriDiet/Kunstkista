@@ -112,14 +112,14 @@ const model = {
     
 
         categories: [
-            { id: 1, name: 'paintings' },
-            { id: 2, name: 'knittings' },
-            { id: 3, name: 'figurines' },
-            { id: 4, name: 'woodworks' },
-            { id: 5, name: 'photos' },
-            { id: 6, name: 'turnedBowls' },
-            { id: 7, name: 'rosepaintings' },
-            { id: 8, name: 'writings' },
+            { id: 1, name: 'Malerier' },
+            { id: 2, name: 'Strikketøy' },
+            { id: 3, name: 'Trefigurer' },
+            { id: 4, name: 'Treverk' },
+            { id: 5, name: 'Fotografier' },
+            { id: 6, name: 'Dreide boller' },
+            { id: 7, name: 'Rosemaling' },
+            { id: 8, name: 'Noveller/Skriv' },
         ],
 
         salesForm: [
