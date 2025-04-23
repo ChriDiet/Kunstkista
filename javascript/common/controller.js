@@ -15,3 +15,9 @@ function setCategoryProductPage(listingId) {
    setPage('productCategory')
 
 }
+
+function setPage(pagename) {
+   model.app.previousPage = model.app.currentPage;
+   model.app.currentPage = pagename;
+   updateView()
+}
