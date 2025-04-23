@@ -36,6 +36,7 @@ function createNewUserContactInfo() {
 
 
 function createNewUser(name) {
+
    return {
       id: getNextUserId(),
       isAdmin: false,
@@ -46,7 +47,8 @@ function createNewUser(name) {
       password: createRandomPassword(),
       image: 'profilePicPlaceHolder.png',
       personalBio: 'Her er brukeren sin bio',
-      rating: 5
+      rating: 5,
+      verified: Math.random() < 0.85 ? false : true
    }
 }
 
@@ -96,6 +98,8 @@ function createNewListings() {
          pickup: Math.random() < 0.5 ? false : true,
          send: Math.random() < 0.5 ? false : true,
          dateListed: createRandomDate(),
+         waitingForApproval: Math.random() < 0.9 ? false : true,
+         approvedForSale: Math.random() < 0.2 ? false : true,
       })
    }
 }

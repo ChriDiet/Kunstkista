@@ -12,7 +12,7 @@ function createHeader() {
    
    return /*HTML*/ `
    <div class="header">
-      <div class="logo"><img src="./images/kunstkistalogo.svg"></div>
+      <div onclick="setPage('home')" class="logo"><img src="./images/kunstkistalogo.svg"></div>
    <div class="menuButtons">
       <button onclick="setPage('home')"> <img class="homeButton" src="./images/home.png">Hjem</button>
       

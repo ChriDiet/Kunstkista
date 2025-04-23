@@ -1,6 +1,6 @@
 const model = {
     app: {
-        currentPage: 'adminProductPageApproval',
+        currentPage: 'home',
         selectedListingId: 1,
         selectedCategory: 2,
         selectedAuctionProductId: 2,

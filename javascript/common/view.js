@@ -54,7 +54,7 @@ function changeView() {
          break;
 
       case page.newSale:
-         currentView = drawNewSaleHtml();
+         currentView = showNewSaleView();
          break;
 
       case page.productPage:
