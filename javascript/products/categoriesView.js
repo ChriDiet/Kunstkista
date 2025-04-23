@@ -3,38 +3,33 @@ function showCategoriesView() {
       <div class="categoryContainer">
          <div class="largeFont">Kategorier</div>
    <div class="categoryGrid">
-      <div class="categoryCard 1">
-         <div>Malerier</div>
-         <img src="./images/monalisa.jpg">
-      </div>
-      <div class="categoryCard 2">
-         <div>Strikketøy</div>
-         <img src="./images/mariusgenser.jpg">
-      </div>
-      <div class="categoryCard 3">
-         <div>Trefigurer</div>
-         <img src="./images/isbjorner.jpg">
-      </div>
-      <div class="categoryCard 4">
-         <div>Dreide Boller</div>
-         <img src="./images/dreidboller.jpg">
-      </div>
-      <div class="categoryCard 5">
-         <div>Rosemaling</div>
-         <img src="./images/rosemaling.jpg">
-      </div>
-      <div class="categoryCard 6">
-         <div>Fotografier</div>
-         <img src="./images/fotografier.jpg">
-      </div>
-      <div class="categoryCard 7">
-         <div>Noveller/Skriv</div>
-         <img src="./images/writings.jpg">
-      </div>
-      <div class="categoryCard 8">
-         <div>Treverk</div>
-         <img src="./images/woodwork.jpg">
-      </div>
+      ${createCategoriesCard()}
    </div>
    `;
+}
+
+
+
+function createCategoriesCard() {
+   let categoryImages = [ 
+      { categoryId: 1, url: './images/maleri.jpg'},
+      { categoryId: 2, url: './images/strikketoy.jpg'},
+      { categoryId: 3, url: './images/figurer.jpg'},
+      { categoryId: 4, url: './images/trearbeid.jpg'},
+      { categoryId: 5, url: './images/fotografi.jpg'},
+      { categoryId: 6, url: './images/dreidbolle.jpg'},
+      { categoryId: 7, url: './images/rosemaling.jpg'},
+      { categoryId: 8, url: './images/skrifter.jpg'},
+   ]
+   let html = '';
+   for (let category of model.data.categories) {
+      imgUrl = categoryImages.find(categoryImage => categoryImage.categoryId === category.id)?.url ?? './images/placeholder.png';
+      html += `
+         <div onclick="setProductCategoryPage(${category.id})" class="categoryCard">
+            <div class="categoryName largeFont">${category.name}</div>          
+            <img src="${imgUrl}">
+         </div>
+         `
+   }
+   return html;
 }
