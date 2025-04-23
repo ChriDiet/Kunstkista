@@ -1,4 +1,4 @@
-function drawChangePasswordAndUserNameHtml(){
+function drawChangePasswordHtml(){
     return /*HTML*/`
     <h2>Bytt brukernavn eller passord</h2>
     <div class="passwordAndUserNameContainer">
