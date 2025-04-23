@@ -1,5 +1,4 @@
 /*COMMON*/
-
 .heading {
    font-size: calc(0.5vw + 2.5rem);
 }
@@ -51,11 +50,16 @@ img {
    align-self: center;
 
 }  
+
+/*PRODUCT PAGE*/
+
 .productPageContainer {
    display: grid;
    width: 50%;
    align-self: center;
    padding-bottom: 100px;
+   justify-self: center;
+
 }
 
 .infoHeader {
