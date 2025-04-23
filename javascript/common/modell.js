@@ -1,6 +1,8 @@
 const model = {
     app: {
         currentPage: 'home',
+        selectedListingId: 1,
+        selectedCategory: 2,
         previousPage: '',
         pages: {
             home: 'home',

@@ -27,3 +27,13 @@ function getNextContactInfoId() {
    }
    return maxId + 1;
 }
+
+function getNextListingImageId() {
+   let maxId = 0;
+   for (const listingImage of model.data.listingImages) {
+      if (listingImage.id > maxId) {
+         maxId = listingImage.id;
+      }
+   }
+   return maxId + 1;
+}

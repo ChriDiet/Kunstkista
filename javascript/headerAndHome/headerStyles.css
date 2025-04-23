@@ -109,7 +109,9 @@ body {
 }
 
 .auctionHeader img {
-   width: 100%;
+   width: 600px;
+   height: 690px;
+   object-fit: cover;
    border-radius: 10px;
    box-shadow: 3px 3px 40px 0px rgba(0, 0, 0, 0.439);
 }
@@ -123,6 +125,7 @@ body {
    display: flex;
    flex-direction: column;
    align-items: center;
+   width: 90%;
 }
 
 .auctionImgContainer div {
@@ -131,7 +134,7 @@ body {
    gap: 15px;
    justify-content: center;
    margin-bottom: 5rem;
-   width: 80%;
+   width: 90%;
 }
 
 .newArtContainer {

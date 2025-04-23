@@ -106,6 +106,26 @@ function createRandomDate() {
    return date;
 }
 
+function createListingImages() {
+   let nextListingImageId = getNextListingImageId();
+   let listingImages = model.data.listingImages;
+   let categoryImages = [ 
+      { categoryId: 1, url: './images/maleri.jpg'},
+      { categoryId: 2, url: './images/strikketoy.jpg'},
+      { categoryId: 3, url: './images/figurer.jpg'},
+      { categoryId: 4, url: './images/trearbeid.jpg'},
+      { categoryId: 5, url: './images/fotografi.jpg'},
+      { categoryId: 6, url: './images/dreidbolle.jpg'},
+      { categoryId: 7, url: './images/rosemaling.jpg'},
+      { categoryId: 8, url: './images/skrifter.jpg'},
+   ]
+
+   for(let listing of model.data.listings) {
+      listingImages.push( {id: nextListingImageId, listingId: listing.id, url: categoryImages.find(x => x.categoryId === listing.categoryId).url})
+   }
+}
+
 createRandomUsers();
 createNewUserContactInfo();
 createNewListings();
+createListingImages();

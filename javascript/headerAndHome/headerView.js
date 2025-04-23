@@ -3,7 +3,7 @@ function createHeader() {
    const user = model.data.users.find(users => users.id == model.app.isLoggedIn);
 
    if(user){
-      loggInHtml = `${user.firstName}`;
+      loggInHtml = `${user.firstName} ${user.lastName}`;
 
    } else{
       loggInHtml = 'Logg inn'
@@ -38,10 +38,3 @@ function isHome() {
    if (!model.app.currentPage == 'home')
       return false;
 }
-  
-  
-  
-  
-  
-  
-  
