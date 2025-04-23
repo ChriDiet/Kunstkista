@@ -1,8 +1,10 @@
 const model = {
     app: {
-        currentPage: 'home',
+        currentPage: 'adminProductPageApproval',
         selectedListingId: 1,
         selectedCategory: 2,
+        selectedAuctionProductId: 2,
+        selectedListingForApprovalId: 1,
         previousPage: '',
         pages: {
             home: 'home',
@@ -123,8 +125,8 @@ const model = {
         ],
 
         salesForm: [
-            { id: 1, type: 'Sale' },
-            { id: 2, type: 'Auction' }
+            { id: 1, type: 'Vanlig salg' },
+            { id: 2, type: 'Auksjon' }
         ],
 
         listingImages: [
@@ -153,6 +155,8 @@ const model = {
                 pickup: false,
                 send: true,
                 dateListed: '2025-03-26',
+                waitingForApproval: true,
+                approvedForSale: false,
             },
 
             {
@@ -169,6 +173,8 @@ const model = {
                 pickup: true,
                 send: true,
                 dateListed: '2025-03-26',
+                waitingForApproval: false,
+                approvedForSale: true,
             },
 
             {
@@ -185,6 +191,8 @@ const model = {
                 pickup: true,
                 send: true,
                 dateListed: '2025-03-30',
+                waitingForApproval: false,
+                approvedForSale: true,
             },
 
             {
@@ -201,6 +209,8 @@ const model = {
                 pickup: false,
                 send: true,
                 dateListed: '2025-03-31',
+                waitingForApproval: false,
+                approvedForSale: true,
             },
 
             {
@@ -217,6 +227,8 @@ const model = {
                 pickup: false,
                 send: true,
                 dateListed: '2025-03-30',
+                waitingForApproval: false,
+                approvedForSale: true,
             },
 
             {
@@ -233,6 +245,8 @@ const model = {
                 pickup: true,
                 send: false,
                 dateListed: '2025-03-19',
+                waitingForApproval: false,
+                approvedForSale: true,
             },
 
             {
@@ -249,6 +263,8 @@ const model = {
                 pickup: true,
                 send: false,
                 dateListed: '2025-03-17',
+                waitingForApproval: false,
+                approvedForSale: true,
             }, 
 
             {
@@ -265,6 +281,8 @@ const model = {
                 pickup: true,
                 send: false,
                 dateListed: '2025-03-19',
+                waitingForApproval: false,
+                approvedForSale: true,
             }
         ],
 
@@ -280,6 +298,7 @@ const model = {
                 image: null,
                 personalBio: 'Italiensk kunstner, ingeniør,skulptør og arkitekt',
                 rating: 4.7,
+                verified: true
             },
 
             {
@@ -293,6 +312,7 @@ const model = {
                 image: null,
                 personalBio: 'Lager figurer',
                 rating: 4.5,
+                verified: false
             },
 
             {
@@ -306,6 +326,7 @@ const model = {
                 image: null,
                 personalBio: 'Jeg elsker å strikke. Mormor til to gutter på 3år og 5år<3',
                 rating: 4.9,
+                verified: false
             },
 
             {
@@ -319,6 +340,7 @@ const model = {
                 image: null,
                 personalBio: 'Lager flotte ting ut av tre',
                 rating: 4.6,
+                verified: false
             },
 
             {
@@ -332,6 +354,7 @@ const model = {
                 image: null,
                 personalBio: 'Maler',
                 rating: 4.9,
+                verified: true
             },
 
             {
@@ -345,6 +368,7 @@ const model = {
                 image: null,
                 personalBio: 'Lager alt mulig rart',
                 rating: 4.8,
+                verified: true
             }
         ],
 
