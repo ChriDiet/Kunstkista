@@ -13,7 +13,7 @@ const model = {
             inAuction: 'inAuction',
             myAuctions: 'myauctions',
             registerUser: 'registerUser',
-            changeUserNameOrPass: 'changeUserNameOrPass',
+            changePassword: 'changePassword',
             editUser: 'editUser',
             newSale: 'newSale',
             productPageCustomer: 'productPageCustomer',
