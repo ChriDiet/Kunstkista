@@ -29,6 +29,7 @@ function showHomeView() {
    `;
 }
 
+
 function createNewArtContainer() {
    let html = '';
    let imgUrl = '';
@@ -53,6 +54,8 @@ function createNewArtContainer() {
    }
    return html;
 }
+
+
    function changeSliderImage(action) {
       let urls = model.data.listingImages.map(listingUrl => listingUrl.url)
       let minIndex = 0;
