@@ -42,7 +42,7 @@ function createArtContainer() {
                <p>${listing.title}</p>
                <p class="price">Gjeldende bud: ${listing.price}kr</p>
            </div>
-           <button class="bid-button" onclick="showInAuctionView(${listing.id})">Bli med</button>
+           <button class="bid-button" onclick="setAuctionProductPage(${listing.id})">Bli med</button>
        </div>
        `;
    }
