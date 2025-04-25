@@ -7,7 +7,7 @@ function showProfileView(){
     
     return /*HTML*/`
         <h2>${loggedInUser}</h2>
-        <img class="profileImage" src="images/profilePicPlaceHolder.png">
+        <img class="loginImage" src="images/profilePicPlaceHolder.png">
         <div class="profileInfoContainer">
             <div class="profileInfo">
                 <h3>Brukernavn</h3>
