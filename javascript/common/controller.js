@@ -20,3 +20,8 @@ function setPage(pagename) {
    model.app.currentPage = pagename;
    updateView()
 }
+
+function setAdminApprovalPage(listingId) {
+   model.app.selectedListingForApprovalId = listingId;
+   setPage('adminProductPageApproval')
+}

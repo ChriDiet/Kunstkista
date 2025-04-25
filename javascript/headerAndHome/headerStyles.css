@@ -9,7 +9,7 @@
    background-color: transparent;
    border: none;
    font-size: calc(0.9rem + 0.5vw);
-   margin-left: 9rem;
+   margin-left: 12rem;
    cursor: pointer;
    margin-bottom: 0px;
 }
@@ -156,7 +156,6 @@ body {
    width: 70%;
    align-self: center;
    margin-top: 1rem;
-   flex: 1;
    object-fit: cover;
    border-radius: 1rem;
 }
@@ -175,3 +174,8 @@ h2 {
    box-shadow: 4px 3px 10px 0px rgba(0, 0, 0, 0.128);
    border-radius: 15px;
 }
+
+.profilSelect {
+   font-size: large;
+   border: none;
+}  

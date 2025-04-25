@@ -3,11 +3,23 @@ function createHeader() {
    const user = model.data.users.find(users => users.id == model.app.isLoggedIn);
 
    if(user){
-      loggInHtml = `${user.firstName} ${user.lastName}`;
-
-   } else{
-      loggInHtml = 'Logg inn'
-
+      loggInHtml = `
+         <div class="logIn">
+            <img src="./images/profilePicPlaceHolder.png"/>
+            <select name ="userOptions" id="userOptions" class="profilSelect">
+               <option disabled selected>${user.firstName} ${user.lastName}</option>
+               <option value="myProfile">Min profil</option>
+               <option value="addNewSale">Legg til nytt kunstverk</option>
+               <option value="myAuctions">Mine auksjoner</option>
+               <option value="logOut">Logg ut</option>
+            </select>
+         </div>`;
+   } else {
+      loggInHtml = `
+         <div onclick="setPage('logIn')" class="logIn">
+            <img src="./images/profilePicPlaceHolder.png"/>
+            <p>Logg Inn<p>
+         </div>`;
    }
    
    return /*HTML*/ `
@@ -23,10 +35,8 @@ function createHeader() {
       <input type="search" id="searchbar" placeholder="Hva ser du etter?">
       <button> Søk </button>
    </div>
-   <div onclick="setPage('logIn')" class="logIn">
-      <img src="./images/profilePicPlaceHolder.png"/>
-      <p>${loggInHtml}<p>
-   </div>
+      ${loggInHtml}
+ 
 </div>
 ${isHome() ? '' : '<button class="backButton" onclick="goToPreviousPage()">⬅ Gå tilbake</button>'}
    `;

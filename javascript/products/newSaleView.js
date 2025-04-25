@@ -7,9 +7,9 @@ return /*HTML*/ `
    <div class="newSaleContainer">
 
       <div class="newImagesContainer">
-         <img class="imageBig" src="./images/rosemaling.jpg">
+         <img class="imageBig" src="./images/rosemaling.png">
          <div class="imagesSmall">
-            <img src="./images/rosemaling.jpg">
+            <img src="./images/rosemaling.png">
             <img src="./images/placeholder.png">
             <img src="./images/placeholder.png">
          </div>

@@ -54,14 +54,14 @@ function getListingInformation() {
          </div>
 
          <div class="productInfoContainer bottom">
-         <p class="largeFont underline">Informasjon</p>
+         <p class="largeFont">Informasjon</p>
             <div class="productInfo bottom">
                <p class="mediumFont"><b>Tilstand:</b> ${condition}</p>
                <p class="mediumFont"><b>Mål:</b> ${listing.measurements} cm</p>
                <p class="largeFont">Pris: ${listing.price},-</p>
                <p class="mediumFont"><b>Kan hentes:</b> ${listing.pickup ? 'Ja' : 'Nei'}</p>
                <p class="mediumFont"><b>Kan sendes:</b> ${listing.send ? 'Ja' : 'Nei'}</p>
-               <button class="medium font">Kontakt selger</button>`;
+               <button class="mediumFont">Kontakt selger</button>`;
       }
    }
 }

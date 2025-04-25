@@ -81,13 +81,13 @@ function createPhoneNumber() {
 
 function createNewListings() {
    let users = model.data.users;
-   let listingsToCreate = 200;
+   let listingsToCreate = 300;
 
    for (let i = 0; i < listingsToCreate; i++) {
       model.data.listings.push({
          id: getNextListingId(),
          userId: users[Math.floor(Math.random() * users.length)].id,
-         salesFormId: Math.random() < 0.85 ? 1 : 2,
+         salesFormId: Math.random() < 0.70 ? 1 : 2,
          categoryId: Math.floor(Math.random() * 8) + 1,
          title: 'Produktnavn',
          price: Math.floor(Math.random() * 7000) + 100,
@@ -114,14 +114,14 @@ function createListingImages() {
    let nextListingImageId = getNextListingImageId();
    let listingImages = model.data.listingImages;
    let categoryImages = [ 
-      { categoryId: 1, url: './images/maleri.jpg'},
-      { categoryId: 2, url: './images/strikketoy.jpg'},
-      { categoryId: 3, url: './images/figurer.jpg'},
-      { categoryId: 4, url: './images/trearbeid.jpg'},
-      { categoryId: 5, url: './images/fotografi.jpg'},
-      { categoryId: 6, url: './images/dreidbolle.jpg'},
-      { categoryId: 7, url: './images/rosemaling.jpg'},
-      { categoryId: 8, url: './images/skrifter.jpg'},
+      { categoryId: 1, url: './images/maleri.png'},
+      { categoryId: 2, url: './images/strikketoy.png'},
+      { categoryId: 3, url: './images/figurer.png'},
+      { categoryId: 4, url: './images/trearbeid.png'},
+      { categoryId: 5, url: './images/fotografi.png'},
+      { categoryId: 6, url: './images/dreidbolle.png'},
+      { categoryId: 7, url: './images/rosemaling.png'},
+      { categoryId: 8, url: './images/skrifter.png'},
    ]
 
    for(let listing of model.data.listings) {
