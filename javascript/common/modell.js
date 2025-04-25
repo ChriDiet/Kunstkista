@@ -131,14 +131,14 @@ const model = {
         ],
 
         listingImages: [
-            { id: 1, listingId: 1, url: './images/maleri.jpg' },
-            { id: 2, listingId: 2, url: './images/figurer.jpg' },
-            { id: 3, listingId: 3, url: './images/strikketoy.jpg' },
-            { id: 4, listingId: 4, url: './images/dreidbolle.jpg' },
-            { id: 5, listingId: 5, url: './images/figurer.jpg' },
-            { id: 6, listingId: 6, url: './images/maleri.jpg' },
-            { id: 7, listingId: 7, url: './images/strikketoy.jpg' },
-            { id: 8, listingId: 8, url: './images/rosemaling.jpg' },
+            { id: 1, listingId: 1, url: './images/maleri.png' },
+            { id: 2, listingId: 2, url: './images/figurer.png' },
+            { id: 3, listingId: 3, url: './images/strikketoy.png' },
+            { id: 4, listingId: 4, url: './images/dreidbolle.png' },
+            { id: 5, listingId: 5, url: './images/figurer.png' },
+            { id: 6, listingId: 6, url: './images/maleri.png' },
+            { id: 7, listingId: 7, url: './images/strikketoy.png' },
+            { id: 8, listingId: 8, url: './images/rosemaling.png' },
         ],
 
         listings: [
@@ -469,6 +469,15 @@ const model = {
             { 
                 id: 3,
                 listingId: 3
+            },
+            { 
+                id: 4,
+                listingId: 4
+            },
+            ,
+            { 
+                id: 5,
+                listingId: 5
             }
         ],
 

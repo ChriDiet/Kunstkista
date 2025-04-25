@@ -25,7 +25,6 @@ function showHomeView() {
             </div>
          </div>
       </div>
-
    `;
 }
 
