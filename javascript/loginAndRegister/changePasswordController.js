@@ -12,7 +12,7 @@ function changePassword(){
         alert('Passordene er ikke like!');
       }
         
-        
+    } 
 
 
 
