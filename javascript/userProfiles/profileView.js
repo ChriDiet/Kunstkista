@@ -7,7 +7,36 @@ function showProfileView(){
     
     return /*HTML*/`
         <h2>${loggedInUser}</h2>
-    
+        <img class="profileImage" src="images/profilePicPlaceHolder.png">
+        <div class="profileInfoContainer">
+            <div class="profileInfo">
+                <h3>Brukernavn</h3>
+                <p>${user.username}</p>
+            </div>
+            <div class="profileInfo">
+                <h3>Fornavn</h3>
+                <p>${user.firstName}</p>
+            </div>
+            <div class="profileInfo">
+                <h3>Etternavn</h3>
+                <p>${user.lastName}</p>
+            </div>
+                <div class="profileInfo">
+                    <h3>Epost</h3>
+                <p>${user.email}</p>
+            </div>
+        </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        
+        
     
     
     
