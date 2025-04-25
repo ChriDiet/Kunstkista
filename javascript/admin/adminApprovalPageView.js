@@ -121,7 +121,7 @@ function getApprovedAuctions() {
    let maxListings = 5;
 
    for (let listing of model.data.listings) {
-      if (model.data.auctions.find(listingId => listingId.id == listing.id) && listings < maxListings) {
+      if (model.data.auctions.find(listingId => listing.id == listing.id) && listings < maxListings) {
          listings++
          html += `
             <tr>
