@@ -29,6 +29,8 @@ const model = {
         loggedInUserId: 1,
         isLoggedIn: false,
         isAuctionLive: false,
+        slideIndex: 0,
+        sliderUrl: ''
     },
 
     input: {
