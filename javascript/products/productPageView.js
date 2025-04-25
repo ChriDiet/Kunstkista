@@ -22,6 +22,7 @@ function getListingInformation() {
    let imgUrl;
    let location;
    let condition;
+   let userId;
    
       for (let listing of model.data.listings) {
          if (listing.salesFormId == 1 && listing.id == productListingId) {
@@ -34,7 +35,7 @@ function getListingInformation() {
                <p class="mediumFont">${listing.description}</p>
             </div>
             <div class="userInfo top mediumFont">
-               <p onclick="setSelectedUserId(listing.userId)" class="link">${username}✓ </p>
+               <p onclick="setSelectedUserId()" class="link">${username}✓</p>
                <p>📍${location}</p>
             </div>
          </div>
@@ -65,3 +66,4 @@ function getListingInformation() {
       }
    }
 }
+

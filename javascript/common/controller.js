@@ -1,7 +1,6 @@
 function setProductPage(listingId) {
    model.app.selectedListingId = listingId;
    setPage('productPage')
-
 }
 
 function setAuctionProductPage(listingId) {
@@ -24,4 +23,10 @@ function setPage(pagename) {
 function setAdminApprovalPage(listingId) {
    model.app.selectedListingForApprovalId = listingId;
    setPage('adminProductPageApproval')
+}
+
+function setSelectedUserId(userId) {
+   console.log(userId)
+   model.app.selectedUserId = userId;
+   setPage('profile')
 }

@@ -37,3 +37,10 @@ function getNextListingImageId() {
    }
    return maxId + 1;
 }
+
+function isHome() {
+   if (model.app.currentPage == 'home')
+      return true;
+   if (!model.app.currentPage == 'home')
+      return false;
+}
