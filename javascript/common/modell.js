@@ -5,6 +5,7 @@ const model = {
         selectedCategory: 2,
         selectedAuctionProductId: 2,
         selectedListingForApprovalId: 1,
+        selectedUserId: 10,
         previousPage: '',
         pages: {
             home: 'home',

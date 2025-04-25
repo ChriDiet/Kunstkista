@@ -34,7 +34,7 @@ function getListingInformation() {
                <p class="mediumFont">${listing.description}</p>
             </div>
             <div class="userInfo top mediumFont">
-               <p class="link">${username}✓ </p>
+               <p onclick="setSelectedUserId(listing.userId)" class="link">${username}✓ </p>
                <p>📍${location}</p>
             </div>
          </div>
