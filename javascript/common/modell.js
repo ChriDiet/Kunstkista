@@ -26,6 +26,7 @@ const model = {
             adminProductPageApproval: 'adminProductPageApproval',
             productCategory: 'productCategory'
         },
+        loggedInUserId: 1,
         isLoggedIn: false,
         isAuctionLive: false,
     },
