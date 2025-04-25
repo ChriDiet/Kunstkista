@@ -1,7 +1,3 @@
-let sliderUrl = '';
-let slideIndex = 0;
-
-
 function showHomeView() {
    return /*HTML*/ `
    <div class="homepage">
@@ -11,7 +7,7 @@ function showHomeView() {
          <div class="auctionImgContainer">
             <div>
                <button onclick="changeSliderImage('increase')"> &#10094; </button>
-               <img src="${sliderUrl ? sliderUrl : model.data.listingImages.find(x => x.listingId === model.data.auctions[0].listingId).url}"/>
+               <img src="${model.app.sliderUrl ? model.app.sliderUrl : model.data.listingImages.find(x => x.listingId === model.data.auctions[0].listingId).url}"/>
                <button onclick="changeSliderImage('decrease')"> &#10095; </button>
             </div>
          </div>
@@ -34,14 +30,14 @@ function createNewArtContainer() {
    let imgUrl = '';
    let listings = model.data.listings;
    let listingsQty = 0;
-      let maxListings = 8;
+   let maxListings = 8;
 
    for (let listing of listings) {
       if (listingsQty == maxListings) return html;
-      
+
       listingsQty++
-      imgUrl = model.data.listingImages.find(listingImage => listingImage.listingId === listing.id)?.url ?? './images/placeholder.png'; 
-      
+      imgUrl = model.data.listingImages.find(listingImage => listingImage.listingId === listing.id)?.url ?? './images/placeholder.png';
+
       html += `
       <div onclick="setProductPage(${listing.id})"class="artContainer-homeView">
          <img src="${imgUrl}"/>
@@ -55,24 +51,25 @@ function createNewArtContainer() {
 }
 
 
-   function changeSliderImage(action) {
-      let urls = model.data.listingImages.map(listingUrl => listingUrl.url)
-      let minIndex = 0;
-      let maxIndex = urls.length - 1;
+function changeSliderImage(action) {
+   let urls = model.data.listingImages.map(listingUrl => listingUrl.url)
+   let minIndex = 0;
+   let maxIndex = urls.length - 1;
+   let slideIndex = model.app.slideIndex;
 
    if (action == 'increase' && slideIndex < maxIndex) {
-      slideIndex ++;
-      sliderUrl = urls[slideIndex];
+      model.app.slideIndex++;
+      model.app.sliderUrl = urls[slideIndex];
    }
    if (action == 'decrease' && slideIndex > minIndex) {
-      slideIndex --;
-      sliderUrl = urls[slideIndex];
+      model.app.slideIndex--;
+      model.app.sliderUrl = urls[slideIndex];
    } else if (action == 'increase' && slideIndex == maxIndex) {
-      slideIndex = minIndex;
-      sliderUrl = urls[slideIndex];
+      model.app.slideIndex = minIndex;
+      model.app.sliderUrl = urls[slideIndex];
    } else if (action == 'decrease' && slideIndex == minIndex) {
-      slideIndex = maxIndex;
-      sliderUrl = urls[slideIndex];
+      model.app.slideIndex = maxIndex;
+      model.app.sliderUrl = urls[slideIndex];
    }
    updateView()
-   }
+}
