@@ -181,6 +181,15 @@ img {
    border-radius: 50%;
    border: 0.4rem solid rgb(55, 39, 20);
    object-fit: contain;
+   padding: 0.35rem;
+   transition: 0.1s;
+}
+
+.categoryCard img:hover {
+   scale: 105%;
+   box-shadow: 2px 2px 20px 1px rgba(0, 0, 0, 0.191);
+   cursor: pointer;
+   transition: 0.1s;
 }
 
 .categoryName{

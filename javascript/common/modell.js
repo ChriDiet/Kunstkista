@@ -276,7 +276,7 @@ const model = {
                 userId: 4,
                 salesFormId: 1,
                 categoryId: 7,
-                title: 'Gammel rosemalt kiste',
+                title: 'Rosemalt kiste',
                 price: '1550',
                 conditionId: 4,
                 measurements: '91 x 73',

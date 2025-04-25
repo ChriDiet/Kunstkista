@@ -7,7 +7,7 @@ function showAdminProductPageApprovalView() {
             <div class="productInfoContainer top">
                <div>
                </div>
-               ${getListingInformation()}
+               ${getListingsInformation()}
                </div>
                <div class="adminButtons">
                   <button class="approvalButton">Godkjenn</button>
@@ -20,7 +20,7 @@ function showAdminProductPageApprovalView() {
    `;
 }
 
-function getListingInformation() {
+function getListingsInformation() {
    let productListingId = model.app.selectedListingId;
    let username;
    let imgUrl;
