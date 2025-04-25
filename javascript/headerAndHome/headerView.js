@@ -9,7 +9,7 @@ function createHeader() {
             <img src="./images/profilePicPlaceHolder.png"/>
             <select onchange="setPage(this.value)" name ="userOptions" id="userOptions" class="profilSelect">
                <option disabled selected>${user.firstName} ${user.lastName}</option>
-               <option value="myProfile">Min profil</option>
+               <option value="profile">Min profil</option>
                <option value="newSale">Legg til nytt kunstverk</option>
                <option value="myauctions">Mine auksjoner</option>
                <option value="logOut">Logg ut</option>
