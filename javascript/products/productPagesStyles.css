@@ -178,7 +178,7 @@ img {
 .categoryCard img {
    width: 250px;
    height: 250px;
-   border-radius: 20%;
+   border-radius: 50%;
    border: 0.4rem solid rgb(55, 39, 20);
    object-fit: contain;
 }

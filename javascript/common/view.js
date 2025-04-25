@@ -1,14 +1,6 @@
 function updateView() {
    changeView()
 }
-
-
-function setPage(pagename) {
-   model.app.previousPage = model.app.currentPage;
-   model.app.currentPage = pagename;
-   updateView()
-}
-
 function goToPreviousPage() {
    let previousPage = model.app.previousPage;
    setPage(previousPage);
@@ -61,12 +53,15 @@ function changeView() {
          break;
 
       case page.newSale:
-         currentView = drawNewSaleHtml();
+         currentView = showNewSaleView();
          break;
 
-      case page.productPageCustomer:
-         currentView = showProductPageCustomerView();
-         break;
+         case page.productPage:
+            currentView = showProductPageView();
+            break;
+   
+         case page.categories:
+            currentView = showCategoriesView();
 
       case page.productCategory:
          currentView = showProductCategoryView();
@@ -88,9 +83,8 @@ function changeView() {
          currentView = showAdminProductPageApprovalView();
          break;
 
-      case page.changeUserNameOrPass:
-         currentView = drawChangePasswordAndUserNameHtml();
-         break;
+         case page.changePassword:
+            currentView = drawChangePasswordHtml();
    }
       document.getElementById('app').innerHTML = /*HTML*/`
       ${createHeader()}
