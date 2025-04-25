@@ -11,8 +11,8 @@ function changePassword(){
       } else {
         alert('Passordene er ikke like!');
       }
-        
     } 
+        
 
 
 
