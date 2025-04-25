@@ -1,16 +1,17 @@
 function createHeader() {
    let loggInHtml = 'Logg inn';
    const user = model.data.users.find(users => users.id == model.app.isLoggedIn);
+   let selectedOption = '';
 
    if(user){
       loggInHtml = `
          <div class="logIn">
             <img src="./images/profilePicPlaceHolder.png"/>
-            <select name ="userOptions" id="userOptions" class="profilSelect">
+            <select onchange="setPage(this.value)" name ="userOptions" id="userOptions" class="profilSelect">
                <option disabled selected>${user.firstName} ${user.lastName}</option>
                <option value="myProfile">Min profil</option>
-               <option value="addNewSale">Legg til nytt kunstverk</option>
-               <option value="myAuctions">Mine auksjoner</option>
+               <option value="newSale">Legg til nytt kunstverk</option>
+               <option value="myauctions">Mine auksjoner</option>
                <option value="logOut">Logg ut</option>
             </select>
          </div>`;
