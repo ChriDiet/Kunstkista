@@ -6,8 +6,12 @@ function changePassword(){
     if(user.password !== model.input.editUser.newPassword && model.input.editUser.newPassword === model.input.editUser.repeatNewPassword){
         user.password = model.input.editUser.newPassword;
         setPage('logIn');
+      } else if(user.password === model.input.editUser.newPassword){
+        alert('Nytt passord kan ikke være likt gammelt passord!');
+      } else {
+        alert('Passordene er ikke like!');
       }
-    }
+        
         
 
 
