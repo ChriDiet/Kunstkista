@@ -2,7 +2,7 @@
 function showAuctionsView() {
    let html = `
    <div class="auction-page">
-   
+   <button onclick="setPage('myauctions')">Mine auksjoner</button>
     
        <h2>Auksjon avsluttes: <span id="countdown">1 dag 10 timer 2 minutter</span></h2>
        

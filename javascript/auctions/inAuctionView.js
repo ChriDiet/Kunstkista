@@ -95,7 +95,7 @@ function getAuctionListingInformation() {
           </div>
           
           <div class="bid-section">
-          <input type="number" id="bidInput" value="${listing.price + 500}" />
+          <input type="number" id="bidInput" value="${listing.price}" />
            <button onclick="submitBid(${productListingId})">Legg inn bud</button>
       </div>
        <div class="bid-history">

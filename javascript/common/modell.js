@@ -26,6 +26,7 @@ const model = {
             adminProductPageApproval: 'adminProductPageApproval',
             productCategory: 'productCategory'
         },
+        loggedInUserId: 1,
         isLoggedIn: false,
         isAuctionLive: false,
     },
@@ -289,7 +290,7 @@ const model = {
         users: [
             {
                 id: 1,
-                isAdmin: false,
+                isAdmin: true,
                 isLoggedIn: false,
                 userName: 'Leo52',
                 firstName: 'Leonardo',
