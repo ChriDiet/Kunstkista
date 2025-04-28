@@ -28,6 +28,8 @@ function showProfileView(){
             <button onclick="setPage(typeOfPage)">${typeOfButton}</button>
             <h3>Bio:</h3>
             <div>${user.personalBio}</div> 
+            <h3>Anmeldelser</h3>
+            
             
            
                 
