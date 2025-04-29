@@ -29,11 +29,31 @@ function showProfileView(){
             <h3>Bio:</h3>
             <div>${user.personalBio}</div> 
             <h3>Anmeldelser</h3>
-            
-            
-           
-                
         </div>
+            
+    <div class="profileArt">
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </div>    
+           
+        `;
+                
                 
             
             
@@ -58,5 +78,4 @@ function showProfileView(){
     
 
     
-    `;
 }
