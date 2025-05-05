@@ -39,7 +39,7 @@ function getProfileHtml() {
    } else if (loggedInUser && isAdmin == loggedInUser.id) {
       html = `
          <div class="logIn">
-            <img src="./images/adminPlaceholder.png"/>
+            <img src="./images/adminPLaceholder.png"/>
             <select onchange="setPage(this.value)" name ="userOptions" id="userOptions" class="profilSelect">
                <option disabled selected>${loggedInUser.firstName} ${loggedInUser.lastName}</option>
                <option value="adminApprovalPage">Godkjenninger</option>
