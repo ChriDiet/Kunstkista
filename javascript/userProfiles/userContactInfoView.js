@@ -1,4 +1,4 @@
-export function userContactInfoView(user) {
+function userContactInfoView(user) {
   return `
     <div class="user-contact-info">
       <h2>Contact Information</h2>
