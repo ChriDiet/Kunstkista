@@ -8,6 +8,7 @@
 .auctions-list {
     flex: 2;
     margin-right: 20px;
+    font-size: 25px;
 }
 
 .auction-overview {
@@ -123,7 +124,7 @@
   
   .bid-section button {
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 24px;
     background-color: #0077cc;
     color: white;
     border: none;
@@ -146,5 +147,5 @@
   
   .bid-history p {
     margin: 5px 0;
-    font-size: 16px;
+    font-size: 30px;
   }
